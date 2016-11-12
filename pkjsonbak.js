@@ -1,0 +1,45 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan22/workflow-folder.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/stefan22/workflow-folder/issues"
+  },
+
+  "homepage": "https://github.com/stefan22/workflow-folder#readme",
+  "name": "folderstructure",
+  "version": "1.0.0",
+  "description": "folder structure",
+  "author": "sl",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "cache-breaker": "0.0.4",
+    "connect-livereload": "^0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-cache-breaker": "^2.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-open": "^0.2.3",
+    "matchdep": "^1.0.1"
+  },
+  "dependencies": {
+    "coffee-script": "^1.11.1"
+  },
+  //idea is to run this dependencies automatically too.
+  //"preferGlobal": "true",
+  "bin": {
+    "cli.js": "public/js/cli.js"
+  },
+  "scripts": {
+    "install": "link-bin"
+  }
+
+}

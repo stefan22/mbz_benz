@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../js/scripts.js"],"names":["Animal","name","type","legs","this","animal1"],"mappings":";;;CAAA,WAEC,QAASA,GAAOC,EAAKC,EAAKC,GACzBC,KAAKH,KAAOA,EACZG,KAAKF,KAAOA,EACZE,KAAKD,KAAOA,EAGb,GAAIE,GAAU,GAAIL,EAElBK,GAAQJ,KAAO,QACfI,EAAQH,KAAO,MACfG,EAAQF,KAAO,CAED,IAAIH,EAElBK,GAAQJ,KAAO,QACfI,EAAQH,KAAO,OACfG,EAAQF,KAAO","file":"scripts.min.js"}

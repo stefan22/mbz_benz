@@ -1,0 +1,147 @@
+/* 
+---------------------------------------
+ 		*** Styles.css ***
+    	==================
+_______________________________________*/
+/*
+
+*/
+/* line 19, ../../sass/styles.scss */
+body {
+  font-size: 16px;
+  font-family: "Roboto Mono", "monospace";
+}
+
+/* line 26, ../../sass/styles.scss */
+p {
+  font-family: "Roboto Mono", "monospace";
+  font-size: 20px;
+  line-height: 32px;
+  color: #666666;
+}
+
+/* line 33, ../../sass/styles.scss */
+header {
+  background: url(../assets/images/nav2.jpg) repeat-x;
+  padding: 5em 0;
+  background: #222222;
+}
+/* line 43, ../../sass/styles.scss */
+header .navbar {
+  padding: 2em 0 1.6em;
+  border: none;
+  margin-bottom: 0;
+}
+/* line 47, ../../sass/styles.scss */
+header .navbar .logogit.brandz {
+  height: auto;
+}
+/* line 49, ../../sass/styles.scss */
+header .navbar .logogit.brandz .navbar-header {
+  display: inline-block;
+  float: right;
+}
+/* line 54, ../../sass/styles.scss */
+header .navbar .logogit.brandz div.subheader-img header {
+  height: 130px;
+}
+/* line 58, ../../sass/styles.scss */
+header .navbar .logogit.brandz div.subheader-img h1 {
+  display: inline-block !important;
+  margin: 0 auto;
+  font-size: 48px;
+  line-height: 60px;
+  vertical-align: middle;
+  font-family: "Roboto Mono", "monospace";
+  color: #fff;
+  margin-left: 1em;
+  text-shadow: 1px 3px 10px black;
+}
+/* line 70, ../../sass/styles.scss */
+header .navbar .logogit.brandz div.subheader-img img.img-responsive {
+  display: inline-block !important;
+  margin: 0 auto;
+  font-size: 42px;
+  line-height: 70px;
+  vertical-align: middle;
+  background: black;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.77);
+  /* box-sizing: border-box; */
+  outline: 3px solid #222222;
+  border: 1px solid #ececec;
+}
+/* line 88, ../../sass/styles.scss */
+header ul.nav.navbar-nav > li.active a {
+  background-color: transparent !important;
+}
+/* line 93, ../../sass/styles.scss */
+header ul.nav.navbar-nav > li {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: normal;
+}
+/* line 97, ../../sass/styles.scss */
+header ul.nav.navbar-nav > li a {
+  padding-top: 25px;
+}
+/* line 105, ../../sass/styles.scss */
+header .navbar-right.sopra {
+  padding-right: 1em;
+  position: fixed;
+  right: 20%;
+  top: 5%;
+}
+/* line 113, ../../sass/styles.scss */
+header li#contact {
+  margin-right: 15px;
+}
+/* line 117, ../../sass/styles.scss */
+header li#active {
+  margin-right: 15px;
+}
+
+/* line 129, ../../sass/styles.scss */
+.mainContent .container .maintop {
+  background: url("../assets/images/backgrounds/apiimage.jpg") no-repeat;
+  background-position: left top;
+  background-color: rgba(34, 34, 34, 0.1);
+  height: 600px;
+  width: 100%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-top: 1em;
+  border-top: 1px solid rgba(128, 116, 116, 0.35);
+  text-shadow: 0 4px 4 rgba(255, 255, 255, 0.4);
+  margin-top: .2em;
+  box-shadow: 0px 1px 0px 3px rgba(41, 42, 37, 0.94), 0 0 0 3px #e6e6e6;
+  border: 1px solid white;
+  outline: 3px solid rgba(34, 33, 38, 0.71);
+  border-top: 3px solid rgba(40, 38, 33, 0.99);
+}
+/* line 146, ../../sass/styles.scss */
+.mainContent .container .maintop .headline {
+  margin: 2em 0;
+}
+/* line 148, ../../sass/styles.scss */
+.mainContent .container .maintop .headline h1 {
+  font-size: 48px;
+  line-height: 60px;
+  color: #fafafa;
+  margin-bottom: .3em;
+  font-family: "Roboto Mono", "monospace";
+}
+/* line 155, ../../sass/styles.scss */
+.mainContent .container .maintop .headline h3 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #101010;
+  font-family: "Roboto Mono", "monospace";
+}
+/* line 165, ../../sass/styles.scss */
+.mainContent .container .mainmiddle {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 168, ../../sass/styles.scss */
+.mainContent .container .mainmiddle .innermid .apiarea {
+  padding: 2em 0;
+}

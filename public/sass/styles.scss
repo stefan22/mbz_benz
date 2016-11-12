@@ -1,0 +1,195 @@
+
+
+/* 
+---------------------------------------
+ 		*** Styles.css ***
+    	==================
+_______________________________________*/
+/*
+
+*/
+
+$font:16px;
+$colorwhite:#fafafa;
+$colorTitle:#333;
+$colorDarker:#101010;
+$colorPara:#666666;
+$font-family: 'Roboto Mono', 'monospace';
+
+body {
+	font-size: $font;
+	font-family: $font-family;
+
+}
+
+
+p {
+	font-family: $font-family;
+	font-size: $font + 4;
+	line-height: $font*2;
+	color:$colorPara;
+}
+
+header {
+	background: url(../assets/images/nav2.jpg) repeat-x;
+   
+    nav.navbar.navbar-inverse.navbar-fixed-top {
+		
+
+
+	}
+	padding:5em 0;
+	background:#222222;
+	.navbar {
+		padding:2em 0 1.6em;
+		border:none;
+		margin-bottom:0;
+		.logogit.brandz {
+			height: auto;
+		    .navbar-header {
+		    	display: inline-block;
+		    	float: right;
+		    }
+			div.subheader-img {
+					header {
+						height: 130px;
+					}//header
+
+					h1 {
+						display: inline-block !important;
+						margin:0 auto;
+						font-size: ($font)*3;
+						line-height: ($font)*3 +12px;
+						vertical-align: middle;
+						font-family: $font-family;
+						color:#fff;
+						margin-left: 1em;
+    					text-shadow: 1px 3px 10px rgb(0, 0, 0);
+					}//h1
+					
+					img.img-responsive {
+						display: inline-block !important;
+						margin:0 auto;
+						font-size: 42px;
+					    line-height: 70px;
+					    vertical-align: middle;
+					    background: black;
+					    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.77);
+					    /* box-sizing: border-box; */
+					    outline: 3px solid #222222;
+					    border: 1px solid rgb(236, 236, 236);
+					}//img
+					
+			}//subheader-img
+		}//logogit.brandz	
+	}//navbar
+	ul.nav.navbar-nav > {
+			li.active {
+				a {
+					background-color: transparent !important;
+				}//a
+
+			}//li.active
+			li {
+				font-size: $font + 4;
+				line-height: $font + 12px;
+				font-weight: normal;
+				a {
+					padding-top: 25px;
+				}
+			}//li
+			
+		
+	}//navbar-nav
+
+	.navbar-right.sopra {
+		padding-right: 1em;
+		position: fixed;
+		right:20%;
+		top: 5%
+		
+	}//ul.nav.navbar-right.sopra
+
+	li#contact {
+			margin-right:15px;
+		
+	}//li#contact
+	li#active {
+			
+			margin-right: 15px;
+	} //li.active
+	
+	
+	
+} //header
+
+.mainContent {
+	
+	.container {
+		.maintop {
+			background:url('../assets/images/backgrounds/apiimage.jpg') no-repeat;
+			background-position: left top;
+		    background-color: rgba(34, 34, 34, 0.1);
+		    height: 600px;
+		    width: 100%;
+		    border-bottom-left-radius: 6px;
+		    border-bottom-right-radius: 6px;
+		    padding-top: 1em;
+		    border-top: 1px solid rgba(128, 116, 116, 0.35);
+		    text-shadow: 0 4px 4 rgba(255, 255, 255, 0.4);
+		    margin-top: .2em;
+		    box-shadow: 0px 1px 0px 3px rgba(41, 42, 37, 0.94), 0 0 0 3px #e6e6e6;
+		    border: 1px solid rgb(255, 255, 255);
+		    outline: 3px solid rgba(34, 33, 38, 0.71);
+		    border-top: 3px solid rgba(40, 38, 33, 0.99);
+
+		    .headline {
+				margin:2em 0;
+				h1 {
+					font-size: ($font)*3;
+					line-height: ($font)*3 +12px;
+					color:$colorwhite;
+					margin-bottom: .3em;
+					font-family: $font-family;
+				}//h1
+				h3 {
+					font-size: ($font) + $font/2;
+					line-height: ($font)*2;
+					color:$colorDarker;
+					font-family: $font-family;	
+				}//h3
+			
+			}//headline
+
+		}//maintop
+		.mainmiddle {
+			border-top: 1px solid rgba(0,0,0,.2);
+			.innermid {
+				.apiarea {
+					padding:2em 0;
+
+					p {
+
+
+					}//p
+
+
+				}//apiarea
+
+			}//innermid
+
+
+
+		}//mainmiddle
+		
+		
+
+
+	}//container
+
+}//mainContent
+
+
+
+
+
