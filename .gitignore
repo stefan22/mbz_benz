@@ -22,11 +22,11 @@ bower_components/*
 *.rar
 *.tar
 *.zip
-node_modules
-node-install
-bower_components
+node_modules/**
+node-install/**
+bower_components/**
 .DS_Store
-.sass-cache
+.sass-cache/**
 .git
 CVS
 .svn
