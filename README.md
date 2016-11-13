@@ -1,6 +1,6 @@
 
   
   
-  ![workflow-folder screenshot](/mbzproto.png?raw=true "workflow-folder")
+  ![workflow-folder screenshot](/mbz1proto.png?raw=true "workflow-folder")
   
   
