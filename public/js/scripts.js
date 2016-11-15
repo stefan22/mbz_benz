@@ -1,5 +1,25 @@
 $(function() {
+
+	//going get the avg pres,temp and speed for my chart
+	function getAvg(array) {
+		var sum = 0;
+		for (var i=0; i < array.length; i++) {
+			sum += array[i];
+		}
+		console.log('the array sum is: ' + sum);
+		var avg = (sum/(array.length)).toFixed(2);
+		console.log('the average is: ' + avg);
+		return avg;
+}
+
+
+	//testing function
+	//var test = [34.96,34.94,34.8,34.76,34.7,34.7,34.4];
+	//getAvg(test);
+
+
 	
+
 
 	function returnData(data) {
 		//data is on data
@@ -36,7 +56,7 @@ $(function() {
 		console.log(retSped);
 		retResults.push(retDates,retTemp,retPres,retSped);
 		console.log(retResults);
-		$('#apidata').html(retResults);
+		//$('#apidat').html(retResults);
 
 
 	} //returnData
