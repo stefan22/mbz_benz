@@ -154,35 +154,42 @@ header li#active {
 }
 /* line 177, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid {
-  padding: 0 1em;
+  padding: 0 2em;
   border: 1px solid #d1d1d1;
 }
 /* line 180, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid .apresults {
-  min-height: 360px;
-  margin: 1em 0;
+  min-height: 220px;
+  max-width: 981px;
+  margin: 0 auto;
+}
+/* line 184, ../../sass/styles.scss */
+.mainContent .container .mainmiddle .innermid .apresults .apresbody {
+  margin: 2em 0;
 }
 /* line 186, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apresults textarea {
-  margin: 0 2em auto;
+.mainContent .container .mainmiddle .innermid .apresults .apresbody h2 {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: .5em;
 }
-/* line 191, ../../sass/styles.scss */
+/* line 203, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid #clipboard {
   text-align: center;
   margin: 2em 0;
   padding: 1em 0;
   border-bottom: 1px dotted #d4d4d4;
 }
-/* line 198, ../../sass/styles.scss */
+/* line 210, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid .apiarea {
   margin: 1em 0;
 }
-/* line 200, ../../sass/styles.scss */
+/* line 212, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid .apiarea h2 {
   font-size: 32px;
   margin: .5em 0;
 }
-/* line 206, ../../sass/styles.scss */
+/* line 218, ../../sass/styles.scss */
 .mainContent .container .mainmiddle .innermid .apiarea p {
   margin: .5em 0;
 }
