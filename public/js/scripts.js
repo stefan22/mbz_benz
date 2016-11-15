@@ -56,7 +56,7 @@ $(function() {
 		console.log(retSped);
 		retResults.push(retDates,retTemp,retPres,retSped);
 		console.log(retResults);
-		//$('#apidat').html(retResults);
+		$('#apidat').html(retResults);
 
 
 	} //returnData
@@ -91,8 +91,13 @@ $(function() {
 	}//grabData
 
 	grabData();
+
+
+	
+	
+
+	
 	
 
 }); //pageloaded
-
 

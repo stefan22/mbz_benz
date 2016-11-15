@@ -183,8 +183,18 @@ header {
 					p#apidata {
 						
 					}
+					textarea {
+						margin:0 2em auto;
+					}//textarea
 
 				}//apresults
+				#clipboard {
+					text-align: center;
+					margin:2em 0;
+					padding:1em 0;
+					border-bottom: 1px dotted #d4d4d4;
+
+				}//clipboard
 				.apiarea {
 					margin:1em 0;
 					h2 {
@@ -211,7 +221,6 @@ header {
 	}//container
 
 }//mainContent
-
 
 
 
