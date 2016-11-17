@@ -6,15 +6,15 @@ $(function() {
 		for (var i=0; i < array.length; i++) {
 			sum += array[i];
 		}
-		console.log('the array sum is: ' + sum);
+		//console.log('the array sum is: ' + sum);
 		var avg = (sum/(array.length)).toFixed(2);
-		console.log('the average is: ' + avg);
-		return avg;
+		//console.log('the average is: ' + avg);
+		//return avg;
 }
 
 
 	//testing function
-	//var test = [34.96,34.94,34.8,34.76,34.7,34.7,34.4];
+    //var test = [34.96,34.94,34.8,34.76,34.7,34.7,34.4];
 	//getAvg(test);
 
 
@@ -54,9 +54,24 @@ $(function() {
 		console.log(retTemp);
 		console.log(retPres);
 		console.log(retSped);
-		retResults.push(retDates,retTemp,retPres,retSped);
-		console.log(retResults);
-		$('#apidat').html(retResults);
+		
+		// just retTemp data
+		if (retTemp.length > 0) {
+			//console.log(retTemp.length); //length is 3
+			for (var i=0; i < retTemp.length; i++) {
+				//all three sub arrays
+				var subarray = retTemp[i];
+				console.log(subarray);
+
+				
+				
+			
+			}//outer loop
+
+
+
+		}// if greater than zero
+
 
 
 	} //returnData
