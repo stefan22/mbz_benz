@@ -1,6 +1,7 @@
 $(function() {
 
-	//going get the avg pres,temp and speed for my chart
+	//gets the average presure,speed and temp from an array of
+	//num-decimals
 	function getAvg(array) {
 		var sum = 0;
 		for (var i=0; i < array.length; i++) {
@@ -10,8 +11,8 @@ $(function() {
 		var avg = (sum/(array.length)).toFixed(2);
 		//console.log('the average is: ' + avg);
 		//return avg;
-}
-
+	
+	}// getAvg 
 
 	//testing function
     //var test = [34.96,34.94,34.8,34.76,34.7,34.7,34.4];
@@ -22,7 +23,7 @@ $(function() {
 
 
 	function returnData(data) {
-		//data is on data
+		//api data on data
 		//console.log(data);
 
 		// array of retDates,retTemp,retPres and retSpeed
@@ -37,12 +38,13 @@ $(function() {
 		for (var key in data) {
 			//if property belongs to object
 			if(data.hasOwnProperty) {
-				if((data[key].t !== null) && (data[key].p !== null) && (data[key].s !== null)) {
+				if((data[key].t !== null) && (data[key].p !== null) && 
+					(data[key].s !== null)) {
 
-					retDates.push(key);	  	
-					retTemp.push(data[key].t);
-					retPres.push(data[key].p);
-					retSped.push(data[key].s);
+					retDates.push(key);	//strings  	
+					retTemp.push(data[key].t); //temp
+					retPres.push(data[key].p); //pres
+					retSped.push(data[key].s); //speed
 
 				} //data is not null
 				    
@@ -56,24 +58,43 @@ $(function() {
 		console.log(retSped);
 		
 		// just retTemp data
+		var removed = [];
+		var newsubarray = [];
 		if (retTemp.length > 0) {
 			//console.log(retTemp.length); //length is 3
 			for (var i=0; i < retTemp.length; i++) {
 				//all three sub arrays
 				var subarray = retTemp[i];
-				console.log(subarray);
+				//console.log(subarray);
+				//find strings remove them
+				
+				for (var y=0; y < subarray.length; y++) {
+					if (typeof(subarray[y]) !== "number") {
+						//remove strings.object returns true
+						//each instance one is found.
+						removed += delete subarray[subarray[y]];
+						
+					} //if
+					else {
+						//need to separate numbers
+						newsubarray += subarray[y] + ', ';
 
+					}//else push them to a new object array
+					
+					
+				}//inner loop
 				
 				
-			
 			}//outer loop
-
+			console.log(removed); //removes avg temp string
+			console.log(newsubarray); //add other two arrays into one single array
 
 
 		}// if greater than zero
 
-
-
+		document.getElementById('apidat').innerHTML = newsubarray;
+		var apidatexplan = document.getElementById('apidatexplan').innerHTML += 'right now it returns the sum of the last two object sub-arrays for temperature \n but before that I\'ve removed the strings array';
+	
 	} //returnData
 
 
