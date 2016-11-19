@@ -1,0 +1,6 @@
+html5 Geolocation API
+
+this is a google maps key, i used in conjunction with
+the html5 api i used to retrieve coordinates
+
+&key=AIzaSyDa8v5e9DMd3vGd81nBMQddCejXYlIvcFk
