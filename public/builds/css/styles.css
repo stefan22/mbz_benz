@@ -6,13 +6,13 @@ _______________________________________*/
 /*
 
 */
-/* line 21, ../../sass/styles.scss */
+/* line 26, ../../sass/styles.scss */
 body {
   font-size: 16px;
   font-family: "Roboto Mono", "monospace";
 }
 
-/* line 28, ../../sass/styles.scss */
+/* line 33, ../../sass/styles.scss */
 p {
   font-family: "Roboto Mono", "monospace";
   font-size: 20px;
@@ -20,176 +20,250 @@ p {
   color: #666666;
 }
 
-/* line 35, ../../sass/styles.scss */
+/* line 40, ../../sass/styles.scss */
 header {
-  background: url(../assets/images/nav2.jpg) repeat-x;
-  padding: 5em 0;
-  background: #222222;
+  background-color: #8c1c20;
+  padding: 3.5em 0;
+  border-bottom: 1px solid rgba(71, 20, 22, 0.75);
 }
-/* line 45, ../../sass/styles.scss */
+/* line 44, ../../sass/styles.scss */
+header nav.navbar.navbar-inverse.navbar-fixed-top {
+  background-color: #8c1c20;
+}
+/* line 47, ../../sass/styles.scss */
+header .navbar-inverse .navbar-nav > li > a {
+  color: #e6e6e6;
+  text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
+}
+/* line 51, ../../sass/styles.scss */
+header .navbar-inverse .navbar-nav > .open > a, header .navbar-inverse
+.navbar-nav > .open > a:hover, header .navbar-inverse .navbar-nav > .open > a:focus,
+header li.dropdown.open a.dropdown-toggle {
+  color: #ffffff;
+  text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
+  background-color: #8c1c20;
+}
+/* line 60, ../../sass/styles.scss */
 header .navbar {
-  padding: 2em 0 1.75em;
+  padding: 1.5em 0 1.5em;
   border: none;
   margin-bottom: 0;
 }
-/* line 49, ../../sass/styles.scss */
+/* line 64, ../../sass/styles.scss */
 header .navbar .logogit.brandz {
   height: auto;
 }
-/* line 51, ../../sass/styles.scss */
+/* line 66, ../../sass/styles.scss */
 header .navbar .logogit.brandz .navbar-header {
   display: inline-block;
   float: right;
 }
-/* line 56, ../../sass/styles.scss */
-header .navbar .logogit.brandz div.subheader-img header {
-  height: 130px;
+/* line 70, ../../sass/styles.scss */
+header .navbar .logogit.brandz div.subheader-img {
+  height: 60px;
 }
-/* line 60, ../../sass/styles.scss */
+/* line 74, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img h1 {
   display: inline-block !important;
   margin: 0 auto;
-  font-size: 42px;
-  line-height: 58px;
+  font-size: 36px;
+  line-height: 46px;
   vertical-align: middle;
   font-family: "Roboto Mono", "monospace";
-  color: #fff;
+  color: #ececec;
   margin-left: 1em;
-  text-shadow: 1px 3px 10px black;
+  text-shadow: 0px -1px 0px #524747;
 }
-/* line 72, ../../sass/styles.scss */
+/* line 87, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img img.img-responsive {
   display: inline-block !important;
   margin: 0 auto;
   font-size: 42px;
   line-height: 58px;
   vertical-align: middle;
-  background: black;
-  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.77);
-  /* box-sizing: border-box; */
-  outline: 3px solid #222222;
-  border: 1px solid #ececec;
+  background: #1a87c3;
+  box-shadow: 0px 0px 1px 2px rgba(60, 2, 2, 0.9);
+  border: 1px solid rgba(70, 7, 7, 0.8);
+  border-radius: 50%;
 }
-/* line 90, ../../sass/styles.scss */
+/* line 104, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li.active a {
   background-color: transparent !important;
 }
-/* line 95, ../../sass/styles.scss */
+/* line 109, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 26px;
   font-weight: normal;
 }
-/* line 99, ../../sass/styles.scss */
+/* line 113, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li a {
-  padding-top: 25px;
+  padding-top: 24px;
 }
-/* line 107, ../../sass/styles.scss */
+/* line 121, ../../sass/styles.scss */
 header .navbar-right.sopra {
   padding-right: 1em;
   position: fixed;
-  right: 20%;
-  top: 5.45%;
+  right: 10%;
+  top: 2.75%;
 }
-/* line 115, ../../sass/styles.scss */
+/* line 129, ../../sass/styles.scss */
 header li#contact {
-  margin-right: 15px;
+  margin-right: 17px;
 }
-/* line 119, ../../sass/styles.scss */
+/* line 133, ../../sass/styles.scss */
 header li#active {
-  margin-right: 15px;
+  margin-right: 17px;
 }
 
-/* line 128, ../../sass/styles.scss */
-.mainContent {
-  border-top: 3px solid #fff;
-}
-/* line 131, ../../sass/styles.scss */
-.mainContent .container .maintop {
-  background: url(../assets/images/backgrounds/apiimage.jpg) no-repeat;
-  background-position: left top;
-  background-color: rgba(34, 34, 34, 0.1);
-  height: 600px;
-  width: 100%;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  text-shadow: 0 0px 1px rgba(25, 21, 21, 0.6);
-  box-shadow: 0px 1px 0px 3px rgba(34, 34, 34, 0.98), 0 0 0 3px #e6e6e6;
-  border: 1px solid white;
-  outline: 1px solid rgba(34, 33, 38, 0.71);
-  border-top: 0;
-  padding: 0;
-}
-/* line 146, ../../sass/styles.scss */
-.mainContent .container .maintop .headline {
-  background: rgba(0, 0, 0, 0.35);
-  margin: 1.5em 0;
-  border-radius: 5px;
+/* line 144, ../../sass/styles.scss */
+.mainContent #mainheading {
+  background-color: #1D4E69;
+  height: 330px;
 }
 /* line 150, ../../sass/styles.scss */
-.mainContent .container .maintop .headline .txwrap {
+.mainContent #mainheading .container .maintop .maintopimg {
+  background: url(../assets/images/collaboration-security.svg) no-repeat;
+  background-position: 4px 44px;
+  background-color: rgba(34, 34, 34, 0.1);
+  height: 310px;
+  width: 100%;
+  text-shadow: 0 0px 1px rgba(25, 21, 21, 0.6);
+  border-bottom: 1px solid white;
+  border-top: 0;
+  background-color: #1d4e69;
+  margin: 5em 0 0 0;
+}
+/* line 166, ../../sass/styles.scss */
+.mainContent #mainheading .container .maintop .headline {
+  margin: 1.5em 0 0 0;
+}
+/* line 168, ../../sass/styles.scss */
+.mainContent #mainheading .container .maintop .headline .shadebox {
+  background: rgba(39, 53, 71, 0.55);
+  border-radius: 5px;
+  padding: 1em 0;
+}
+/* line 172, ../../sass/styles.scss */
+.mainContent #mainheading .container .maintop .headline .shadebox .txwrap {
   padding: 0 1.5em;
   border-radius: 6px;
 }
-/* line 153, ../../sass/styles.scss */
-.mainContent .container .maintop .headline .txwrap h1 {
-  font-size: 48px;
-  line-height: 60px;
+/* line 175, ../../sass/styles.scss */
+.mainContent #mainheading .container .maintop .headline .shadebox .txwrap h3 {
+  font-size: 24px;
+  line-height: 32px;
   color: #fafafa;
   margin-bottom: .3em;
   font-family: "Roboto Mono", "monospace";
 }
-/* line 160, ../../sass/styles.scss */
-.mainContent .container .maintop .headline .txwrap h3 {
-  font-size: 24px;
-  line-height: 32px;
-  color: #fafafa;
+/* line 182, ../../sass/styles.scss */
+.mainContent #mainheading .container .maintop .headline .shadebox .txwrap p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #e6e6e6;
   font-family: "Roboto Mono", "monospace";
   padding-bottom: .5em;
 }
-/* line 173, ../../sass/styles.scss */
-.mainContent .container .mainmiddle {
+/* line 202, ../../sass/styles.scss */
+.mainContent #apidatasection {
+  background-color: #273547;
+}
+/* line 205, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle {
   margin: 2em 0;
   overflow: auto;
 }
-/* line 177, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid {
+/* line 209, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid {
   padding: 0 2em;
   border: 1px solid #d1d1d1;
 }
-/* line 180, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apresults {
+/* line 212, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apresults {
   min-height: 220px;
   max-width: 981px;
   margin: 0 auto;
 }
-/* line 184, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apresults .apresbody {
+/* line 216, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody {
   margin: 2em 0;
 }
-/* line 186, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apresults .apresbody h2 {
+/* line 218, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody h2 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: .5em;
 }
-/* line 203, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid #clipboard {
+/* line 235, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid #clipboard {
   text-align: center;
   margin: 2em 0;
   padding: 1em 0;
   border-bottom: 1px dotted #d4d4d4;
 }
-/* line 210, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apiarea {
+/* line 242, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apiarea {
   margin: 1em 0;
 }
-/* line 212, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apiarea h2 {
+/* line 244, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apiarea h2 {
   font-size: 32px;
   margin: .5em 0;
 }
-/* line 218, ../../sass/styles.scss */
-.mainContent .container .mainmiddle .innermid .apiarea p {
+/* line 248, ../../sass/styles.scss */
+.mainContent #apidatasection .container .mainmiddle .innermid .apiarea p {
   margin: .5em 0;
+}
+/* line 262, ../../sass/styles.scss */
+.mainContent #gmap {
+  background-color: #1A8BCB;
+}
+/* line 265, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop {
+  margin-top: 1em;
+}
+/* line 267, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .geocontainer {
+  position: relative;
+  width: 90%;
+  height: 615px;
+  margin: 0 auto;
+}
+/* line 272, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .geocontainer .geointro {
+  padding: 2em 0;
+}
+/* line 274, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .geocontainer .geointro h3 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  font-family: "Roboto Mono", "monospace";
+  padding-bottom: .5em;
+  text-align: center;
+}
+/* line 282, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .geocontainer .geointro p {
+  font-family: "Roboto Mono", "monospace";
+  font-size: 20px;
+  line-height: 28px;
+  color: #e6e6e6;
+  text-align: center;
+}
+/* line 290, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .geocontainer #map_canvas {
+  height: 385px;
+  right: 1%;
+  position: absolute !important;
+  top: 31%;
+  border: 1px solid #d4d3d3;
+  border-radius: 3px;
+  outline-width: 5px;
+  outline-color: rgba(173, 166, 166, 0.89);
+  outline-offset: 3px;
+  outline-style: double;
+  box-sizing: border-box;
+  /* box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.35); */
+  width: 980px;
 }

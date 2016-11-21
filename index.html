@@ -5,10 +5,10 @@
 	<title>Single Page App</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1479426681508">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1479689107974">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1479426681509">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1479426681509">		
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1479689107974">
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1479689107974">		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -20,7 +20,7 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container">
 		  	<div class="logogit brandz">
-		  		<div class="navbar-header">
+		  		<div class="navbar-header"><!-- panckake nav -->
 			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 		   data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
 			        <span class="icon-bar"></span>
@@ -30,7 +30,7 @@
 			    </div>  <!--  end of div navbar header   -->  	
 
 		  		<div class="subheader-img">
-		   			<img class="img-responsive" src="public/builds/assets/images/gitlo.png" alt="api logo" style="max-width:100px; margin:0 auto;">
+		   			<img class="img-responsive" src="public/builds/assets/images/npm-enterprise.svg" alt="api logo" style="max-width:60px; margin:0 auto;">
 		   			<h1>MBZ Car Dealership</h1>
 		   		 </div>  <!--  end of div subheader-img brandz   -->  
 		    
@@ -63,69 +63,224 @@
 	</header>
 
 	<div class="mainContent">
-		<div class="container">
-			<div class="col-row clearfix">
+		
+			<div class="col-row clearfix" id="mainheading">
+			  <div class="container">
 				<div class="col-md-12 maintop">
-					<div class="headline">
-						<div class="txwrap">	
-						<h1>Hello MBZ,</h1>
-						<h3>Alright, This is an Multih3le API SPA. I'm going to serve
-						RESTful JSON data from Several API's, do something and try out
-						another one, and use Angular to go from one page API to another.
-						Maybe, change the Title, Paragraph, Car dealer logo and name, and
-						of course data from each API.
-						</h3>
-						</div>  <!--  end of div txwrap   -->  		
-				  	</div>  <!--  end of div headline   -->  
-				</div>  <!--  end of div maintop  -->  	
+				<div class="row">
+					<div class="col-md-5">
+						<div class="headline">
+							<div class="shadebox">
+								<div class="txwrap">	
+								<h3>Hello MBZ,</h3>
+								<p>Alright, This is an Multih3le API SPA. I'm going to serve
+								RESTful JSON data from Several API's, do something and then use Angular to go from one page API to another and load different data, copy and maybe images too.
+								</p>
+								</div>  <!--  end of div txwrap   -->  
+							</div>  <!--  end of div shadebox   -->  				
+					  	</div>  <!--  end of div headline   -->  
+					  </div>  <!--  end of div col-md-5   -->
+
+					  <div class="col-md-offset-1 col-md-5">
+					  		<div class="maintopimg">
+					  		</div>  <!--  end of div maintopimg   -->  		
+
+					  </div>  <!--  end of div col-md-6   -->  	
+					</div>  <!--  end of div row   -->  	    		
+				</div>  <!--  end of div maintop  --> 
+			  </div>   <!--  end of div container   -->  		 	
 			</div>  <!--  end of div col   -->  
 
-		<div class="col-row clearfix">
-			<div class="mainmiddle">
-				<div class="col-lg-12 innermid">
-					<div class="apresults">
-					  <div class="apresbody">
-					  	 <h2>RESults</h2>
-					  	 <p id="apidatexplan"></p>
-						 <textarea rows="30" cols="96" id="apidat">
+<!-- map section starts here  -->
+
+			<div class="col-row clearfix" id="gmap">
+			  <div class="container">
+				<div class="col-md-12 geotop">
+					<div class="geocontainer">
+				        <div class="geointro">
+				            <h3>First Marker points to your geolocation.</h3>
+				            <p>Detection and Continuous Watching of a User's location (on page load)</p>
+				            <p>Very accurate in all new browsers.</p>
+
+				        </div>  <!--  end of div geointro   -->      
+				        <div id="map_canvas"></div>
+				      
+
+				    </div>  <!--  end of div geocontainer   -->   
+				</div>  <!--  end of div geotop  --> 
+			  </div>  <!--  end of div container   -->  		 	
+			</div>  <!--  end of div col   -->  
+
+<!-- API section starts here -->
+
+			<div class="col-row clearfix" id="apidatasection">
+			  <div class="container"> 
+				<div class="mainmiddle">
+					<div class="col-lg-12 innermid">
+						<div class="apresults">
+						  <div class="apresbody">
+						  	 <h2>RESults</h2>
+						  	 <p id="apidatexplan"></p>
+							 <textarea rows="30" cols="96" id="apidat">
+								
+								<!-- apidata goes here -->
+
+							 </textarea> 		
+						  </div>  <!--  end of div apresbody   -->  			
+						</div>  <!--  end of div apresults   -->  
+
+						<div id="clipboard">
+						  <button type="button" class="btn btn-default btn-lg"
+							data-clipboard-action="copy" data-clipboard-target="#apidat">
+							Copy to Clipboard</button>
 							
-							<!-- apidata goes here -->
-
-						 </textarea> 		
-					  </div>  <!--  end of div apresbody   -->  			
-					</div>  <!--  end of div apresults   -->  
-
-					<div id="clipboard">
-					  <button type="button" class="btn btn-default btn-lg"
-						data-clipboard-action="copy" data-clipboard-target="#apidat">
-						Copy to Clipboard</button>
+						</div>  <!--  end of div clipboard   -->  	
 						
-					</div>  <!--  end of div clipboard   -->  	
-					
-					<div class="apiarea">
-					<h2>Some other text</h2>	
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<br /> 
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="apiarea">
+						<h2>Some other text</h2>	
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.<br /> 
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							
+						</div>  <!--  end of div apiaarea   -->  	
 						
-					</div>  <!--  end of div apiaarea   -->  	
-					
-				</div>  <!--  end of div innermid   -->  	
-			</div>  <!--  end of div mainmiddle   --> 	
+					</div>  <!--  end of div innermid   -->  	
+				</div>  <!--  end of div mainmiddle   --> 
+			  </div>  <!--  end of div container   -->  	 		
+			</div>	  	 <!--  end of div row   -->  	
 
+		
 
-		</div>	  	 <!--  end of div row   -->  	
-
-		</div>  <!--  end of div container   -->  	
 	</div>  <!--  end of div mainContent   -->  	
 
-		 <script src="bower_components/jquery/dist/jquery.js?rel=1479426681509"></script>
-		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1479426681509"></script>
-		 <script src="bower_components/angular/angular.js?rel=1479426681509"></script>
-		 <script src="bower_components/angular-resource/angular-resource.js?rel=1479426681510"></script>
+		 <script src="bower_components/jquery/dist/jquery.js?rel=1479689107974"></script>
+		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1479689107974"></script>
+		 <script src="bower_components/angular/angular.js?rel=1479689107975"></script>
+		 <script src="bower_components/angular-resource/angular-resource.js?rel=1479689107975"></script>
 		 <script src="bower_components/clipboard/dist/clipboard.js"></script>
-		 <script src="public/builds/js/scripts.min.js?rel=1479426681510"></script>  
+		 <script src="public/builds/js/scripts.min.js?rel=1479689107975"></script>
+		 <!-- api key needs to be pass open for tracking purposes. 
+		      I set a couple of domain restrictions in API console - but technically 
+		      an api key isn't needed here. Throws a console error warning without one.
+		  -->
+		 <script type="text/javascript" src="http://maps.google.com/maps/api/js?&key=AIzaSyDa8v5e9DMd3vGd81nBMQddCejXYlIvcFkx"></script>
+	    <script type="text/javascript">
+	    	/* html5 geolocation api to get coordinates and continuous watching.
+	    	   Google map/marker to point out location	*/
+	        var watchID;
+	        var geo;    // for the geolocation object
+	        var map;    // for the google map object
+	        var mapMarker;  // the google map marker object
+
+	        // position options
+	        // mxage best suited for mobile phones - Very similar to geoWatching
+	        // maxage forces agent to renew lat/lon at max age while
+	        // geowatching waits for coordinates to change
+	           var MAXIMUM_AGE = 200;  //200 miliseconds 
+	        // here it's making reference to load time
+	           var TIMEOUT = 300000;      // 5minutes
+	        // for mobile device purposes mostly     
+	           var HIGHACCURACY = true;
+
+	        function getGeoLocation() {
+	            try {
+	                if( !! navigator.geolocation ) {
+	                    return navigator.geolocation;
+	                    
+	                }//if
+	                else {
+	                    return undefined;
+	                }//else
+
+	            }//try 
+
+	            catch(e) {
+	                return undefined;
+	            }
+	        } //getGeoLocation
+
+	        //gets geolocation object from html5 API and gets passed 
+	        //to the geowatchposition method
+	        function show_map(position) {
+	            var lat = position.coords.latitude;
+	            var lon = position.coords.longitude;
+	            var latlng = new google.maps.LatLng(lat, lon);
+	            //if map exist pan n set marker
+	            if(map) {
+	                map.panTo(latlng);
+	                mapMarker.setPosition(latlng);
+	            }//if
+	            //create map 
+	            else {
+	                var myOptions = {
+	                    zoom: 12,
+	                    center: latlng,
+
+	                    // mapTypeID -maps avail
+	                    // ROADMAP displays the default road map view
+	                    // SATELLITE displays Google Earth satellite images
+	                    // HYBRID displays a mixture of normal and satellite views
+	                    // TERRAIN displays a physical map based on terrain information.
+	                    mapTypeId: google.maps.MapTypeId.ROADMAP
+	                };
+	                //create new map object w/options
+	                map = new google.maps.Map(document.getElementById("map_canvas"), 
+	                      myOptions);
+	                //default is 45deg and normally used for Satellite View
+	                map.setTilt(0); // turns off 
+	                //creates new map marker w/options
+	                mapMarker = new google.maps.Marker({
+	                    position: latlng,
+	                    title:"You can RUN\n but You can NEVER HIDE!"
+	                });
+	                mapMarker.setMap(map);
+	            
+	            }//else
+
+	        }//show_map
+
+	        // get call in the event of an error and
+	        // calls stopwatching,test error code and sends an alert
+	        function geo_error(error) {
+	            stopWatching();
+	            switch(error.code) {
+	                case error.TIMEOUT:
+	                    alert('Geolocation Timeout');
+	                    break;
+	                case error.POSITION_UNAVAILABLE:
+	                    alert('Geolocation Position unavailable');
+	                    break;
+	                case error.PERMISSION_DENIED:
+	                    alert('Geolocation Permission denied');
+	                    break;
+	                default:
+	                    alert('Geolocation returned an unknown error code: ' + error.code);
+	            }
+	        }
+
+	        function stopWatching() {
+	            if(watchID) geo.clearWatch(watchID);
+	            watchID = null;
+	        }
+
+	        //calls the geowatchPosition method, and passes constants
+	        function startWatching() {
+	            watchID = geo.watchPosition(show_map, geo_error, {
+	                enableHighAccuracy: HIGHACCURACY,
+	                maximumAge: MAXIMUM_AGE,
+	                timeout: TIMEOUT
+	            });
+	        }
+
+	        window.onload = function() {
+	            if((geo = getGeoLocation())) {
+	                startWatching();
+	            } else {
+	                alert('Geolocation not supported.')
+	            }
+	        }
+	    </script>  
 	</body>
 </html>

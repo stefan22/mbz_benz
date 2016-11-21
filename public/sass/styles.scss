@@ -10,11 +10,16 @@ _______________________________________*/
 */
 
 $font:16px;
+$white:#ffffff;
 $colorwhite:#fafafa;
 $colorTitle:#333;
 $colorDarker:#101010;
 $colorPara:#666666;
+$pinkish:#e6e6e6;
 $font-family: 'Roboto Mono', 'monospace';
+
+$footerColor:#273547;
+$mapColor:#2581B8;
 
 
 
@@ -33,17 +38,27 @@ p {
 }
 
 header {
-	background: url(../assets/images/nav2.jpg) repeat-x;
-   
+    background-color: #8c1c20;
+    padding: 3.5em 0;
+    border-bottom: 1px solid rgba(71, 20, 22, 0.75);
     nav.navbar.navbar-inverse.navbar-fixed-top {
-		
-
-
+		background-color: #8c1c20;	
+	}//nav.navbar.navbar-inverse.navbar-fixed-top
+	.navbar-inverse .navbar-nav > li > a {
+		color: $pinkish;
+    	text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
 	}
-	padding:5em 0;
-	background:#222222;
+	.navbar-inverse .navbar-nav > .open > a, .navbar-inverse 
+	.navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus,
+	li.dropdown.open a.dropdown-toggle  {
+		color: $white;
+    	text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
+    	background-color: #8c1c20;
+	
+	}//resources nav submenu	
+	
 	.navbar {
-		padding:2em 0 1.75em;
+		padding:1.5em 0 1.5em;
 		border:none;
 		margin-bottom:0;
 		.logogit.brandz {
@@ -53,33 +68,32 @@ header {
 		    	float: right;
 		    }
 			div.subheader-img {
-					header {
-						height: 130px;
-					}//header
+					height: 60px;
+					
 
 					h1 {
 						display: inline-block !important;
-						margin:0 auto;
-						font-size: ($font)*2 + 10;
-						line-height: ($font)*3 +10px;
-						vertical-align: middle;
-						font-family: $font-family;
-						color:#fff;
-						margin-left: 1em;
-    					text-shadow: 1px 3px 10px rgb(0, 0, 0);
+						    margin: 0 auto;
+						    font-size: 36px;
+						    line-height: 46px;
+						    vertical-align: middle;
+						    font-family: "Roboto Mono", "monospace";
+						    color: #ececec;
+						    margin-left: 1em;
+						    text-shadow: 0px -1px 0px #524747;
+						
 					}//h1
 					
 					img.img-responsive {
 						display: inline-block !important;
-						margin:0 auto;
-						font-size: ($font)*2 + 10;
-						line-height: ($font)*3 +10px;
+					    margin: 0 auto;
+					    font-size: 42px;
+					    line-height: 58px;
 					    vertical-align: middle;
-					    background: black;
-					    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.77);
-					    /* box-sizing: border-box; */
-					    outline: 3px solid #222222;
-					    border: 1px solid rgb(236, 236, 236);
+					    background: rgb(26, 135, 195);
+					    box-shadow: 0px 0px 1px 2px rgba(60, 2, 2, 0.9);
+					    border: 1px solid rgba(70, 7, 7, 0.8);
+					    border-radius: 50%;
 					}//img
 					
 			}//subheader-img
@@ -93,11 +107,11 @@ header {
 
 			}//li.active
 			li {
-				font-size: $font + 4;
-				line-height: $font + 12px;
+				font-size: $font + 6;
+				line-height: $font + 10px;
 				font-weight: normal;
 				a {
-					padding-top: 25px;
+					padding-top: 24px;
 				}
 			}//li
 			
@@ -107,18 +121,18 @@ header {
 	.navbar-right.sopra {
 		padding-right: 1em;
 		position: fixed;
-		right:20%;
-		top: 5.45%;
+		right:10%;
+		top: 2.75%;
 		
 	}//ul.nav.navbar-right.sopra
 
 	li#contact {
-			margin-right:15px;
+			margin-right:17px;
 		
 	}//li#contact
 	li#active {
 			
-			margin-right: 15px;
+			margin-right: 17px;
 	} //li.active
 	
 	
@@ -126,111 +140,179 @@ header {
 } //header
 
 .mainContent {
-	border-top: 3px solid #fff;
-	.container {
-		.maintop {
-			background: url(../assets/images/backgrounds/apiimage.jpg) no-repeat;
-		    background-position: left top;
-		    background-color: rgba(34, 34, 34, 0.1);
-		    height: 600px;
-		    width: 100%;
-		    border-bottom-left-radius: 6px;
-		    border-bottom-right-radius: 6px;
-		    text-shadow: 0 0px 1px rgba(25, 21, 21, 0.6);
-		    box-shadow: 0px 1px 0px 3px rgba(34, 34, 34, 0.98), 0 0 0 3px #e6e6e6;
-		    border: 1px solid white;
-		    outline: 1px solid rgba(34, 33, 38, 0.71);
-		    border-top: 0;
-		    padding: 0;
-
-		    .headline {
-				background: rgba(0, 0, 0, 0.35);
-			    margin: 1.5em 0;
-			    border-radius: 5px;
-			    .txwrap {
-			    	padding:0 1.5em;
-			    	border-radius: 6px;
-			    	h1 {
-						font-size: ($font)*3;
-						line-height: ($font)*3 +12px;
-						color:$colorwhite;
-						margin-bottom: .3em;
-						font-family: $font-family;
-					}//h1
-					h3 {
-						font-size: ($font) + $font/2;
-						line-height: ($font)*2;
-						color:$colorwhite;
-						font-family: $font-family;
-						padding-bottom: .5em;	
-					}//h3
-
-		    	}//txwrap
-			    
-			}//headline
-
-		}//maintop
-		.mainmiddle {
-			margin:2em 0;
-			overflow: auto;
+	
+	#mainheading {
+		background-color: #1D4E69;
+		height: 330px;
+		.container {
+			.maintop {
 			
-			.innermid {
-				padding:0 2em;
-				border:1px solid #d1d1d1;
-				.apresults {
-					min-height: 220px;
-					max-width: 981px;
-					margin:0 auto;
-						.apresbody {
-							margin:2em 0;
-							h2 {
-								font-size: ($font)*2 + 4;
-								line-height: ($font)*3;
-								margin-bottom: .5em;
-							}//h2
+				.maintopimg {
+			    	background: url(../assets/images/collaboration-security.svg) no-repeat;
+				    background-position: 4px 44px;
+				    background-color: rgba(34, 34, 34, 0.1);
+				    height: 310px;
+				    width: 100%;
+				    text-shadow: 0 0px 1px rgba(25, 21, 21, 0.6);
+				    border-bottom: 1px solid white;
+				    border-top: 0;
+				    background-color: #1d4e69;
+				    margin: 5em 0 0 0;
 
-						}//apresbody
+			    }//maintopimg
 
-					
-					p#apidata {
+			
+			    
+			    .headline {
+				    margin: 1.5em 0 0 0;
+				    .shadebox {
+				    	background: rgba(39, 53, 71, 0.55);
+				    	border-radius: 5px;
+				    	padding:1em 0;
+				    	.txwrap {
+					    	padding:0 1.5em;
+					    	border-radius: 6px;
+					    	h3 {
+								font-size: ($font) + 8;
+								line-height: ($font)*2;
+								color:$colorwhite;
+								margin-bottom: .3em;
+								font-family: $font-family;
+							}//h1
+							p {
+								font-size: ($font) + 4;
+								line-height: ($font) + 12;
+								color:$pinkish;
+								font-family: $font-family;
+								padding-bottom: .5em;	
+							}//h3
+
+				    	}//txwrap
+				    }//shadebox
+	
+				}//headline
+
+			}//maintop
+
+		}//container
+
+	}//#mainheading
+	
+
+	#apidatasection {
+		background-color: #273547;
+		.container {
+			.mainmiddle {
+				margin:2em 0;
+				overflow: auto;
+				
+				.innermid {
+					padding:0 2em;
+					border:1px solid #d1d1d1;
+					.apresults {
+						min-height: 220px;
+						max-width: 981px;
+						margin:0 auto;
+							.apresbody {
+								margin:2em 0;
+								h2 {
+									font-size: ($font)*2 + 4;
+									line-height: ($font)*3;
+									margin-bottom: .5em;
+								}//h2
+
+							}//apresbody
+
 						
-					}
-					textarea {
+						p#apidata {
+							
+						}
+						textarea {
+							
+						}//textarea
+
+					}//apresults
+					#clipboard {
+						text-align: center;
+						margin:2em 0;
+						padding:1em 0;
+						border-bottom: 1px dotted #d4d4d4;
+
+					}//clipboard
+					.apiarea {
+						margin:1em 0;
+						h2 {
+							font-size: $font*2;
+							margin:.5em 0;
+						}//h2
+						p {
+							margin:.5em 0;
+						}
+					}//apiarea
+
+				}//innermid
+
+			}//mainmiddle
+
+		}//container
+	}//#apidatasection
+
+		
+
+	#gmap {
+		background-color: #1A8BCB;
+		.container {
+			.geotop {
+				margin-top: 1em;
+				.geocontainer {
+					position: relative;
+				    width: 90%;
+				    height: 615px;
+				    margin: 0 auto;
+						.geointro {
+							padding:2em 0;
+							h3 {
+								font-size: ($font) + $font/2;
+								line-height: ($font)*2;
+								color:$white;
+								font-family: $font-family;
+								padding-bottom: .5em;
+								text-align: center;	
+							}//h3
+							p {
+								font-family: $font-family;
+								font-size: $font + 4;
+								line-height: $font + 12;
+								color:$pinkish;
+								text-align: center;
+							}//p
+						}//geointro
+						 #map_canvas { 
+				            height: 385px;
+						    right: 1%;
+						    position: absolute !important;
+						    top: 31%;
+						    border: 1px solid #d4d3d3;
+						    border-radius: 3px;
+						    outline-width: 5px;
+						    outline-color: rgba(173, 166, 166, 0.89);
+						    outline-offset: 3px;
+						    outline-style: double;
+						    box-sizing: border-box;
+						    /* box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.35); */
+						    width: 980px;
 						
-					}//textarea
-
-				}//apresults
-				#clipboard {
-					text-align: center;
-					margin:2em 0;
-					padding:1em 0;
-					border-bottom: 1px dotted #d4d4d4;
-
-				}//clipboard
-				.apiarea {
-					margin:1em 0;
-					h2 {
-						font-size: $font*2;
-						margin:.5em 0;
-						
-
-					}//h2
-					p {
-						margin:.5em 0;
-					}
-
-				}//apiarea
-
-			}//innermid
-
-
-
-		}//mainmiddle
+				        }//#map-canvas
+				}//geocontainer
+			}//geotop
+		}//container	
+	}//#gmap	
 		
 		
+		
 
 
-	}//container
+	
 
 }//mainContent
 
