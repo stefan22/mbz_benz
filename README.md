@@ -10,6 +10,6 @@
   <br />
   
   
-  ![screenshot2](public/builds/assets/images/screenshot2.png?raw=true "screenshot2")
+  ![screenshot3](public/builds/assets/images/screenshot3.png?raw=true "screenshot3")
   
   
