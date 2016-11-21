@@ -74,8 +74,8 @@ header {
 					h1 {
 						display: inline-block !important;
 						    margin: 0 auto;
-						    font-size: 36px;
-						    line-height: 46px;
+						    font-size: (($font*2)+ 4px);
+						    line-height: (($font*2) + 16px);
 						    vertical-align: middle;
 						    font-family: "Roboto Mono", "monospace";
 						    color: #ececec;
@@ -166,15 +166,15 @@ header {
 			    .headline {
 				    margin: 1.5em 0 0 0;
 				    .shadebox {
-				    	background: rgba(39, 53, 71, 0.55);
-				    	border-radius: 5px;
-				    	padding:1em 0;
+				    	background: rgba(26, 139, 203, 0.7);
+					    border-radius: 3px;
+					    padding: 1em 0;
 				    	.txwrap {
 					    	padding:0 1.5em;
-					    	border-radius: 6px;
+					    	
 					    	h3 {
 								font-size: ($font) + 8;
-								line-height: ($font)*2;
+								line-height: ($font)*2 + 6px;
 								color:$colorwhite;
 								margin-bottom: .3em;
 								font-family: $font-family;
@@ -263,47 +263,62 @@ header {
 		background-color: #1A8BCB;
 		.container {
 			.geotop {
-				margin-top: 1em;
-				.geocontainer {
-					position: relative;
-				    width: 90%;
-				    height: 615px;
-				    margin: 0 auto;
-						.geointro {
+				margin:3em 0;
+				.left {
+					.geointro {
+						font-family: $font-family;
+						padding:5em 0;
+						height: auto;
+						text-align: center;
+						h1 {
+							font-size: (($font*2)+ 4px);
+						    line-height: (($font*2) + 16px);
+						    color: #ececec;
+						    text-shadow: 0px -1px 0px #524747;
+						}//h1
+						.subgeointro {
 							padding:2em 0;
-							h3 {
-								font-size: ($font) + $font/2;
-								line-height: ($font)*2;
-								color:$white;
-								font-family: $font-family;
-								padding-bottom: .5em;
-								text-align: center;	
-							}//h3
 							p {
-								font-family: $font-family;
 								font-size: $font + 4;
 								line-height: $font + 12;
 								color:$pinkish;
-								text-align: center;
+								margin-bottom: .7em;
+							
 							}//p
-						}//geointro
-						 #map_canvas { 
-				            height: 385px;
-						    right: 1%;
-						    position: absolute !important;
-						    top: 31%;
-						    border: 1px solid #d4d3d3;
-						    border-radius: 3px;
-						    outline-width: 5px;
-						    outline-color: rgba(173, 166, 166, 0.89);
-						    outline-offset: 3px;
-						    outline-style: double;
-						    box-sizing: border-box;
-						    /* box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.35); */
-						    width: 980px;
+
+						}//subgeointro
 						
-				        }//#map-canvas
-				}//geocontainer
+					}//geointro
+
+				}// left
+				.right {
+					
+					.geocontainer {
+						position: relative;
+					    width: 100%;
+					    height: 562px;
+					    margin: 0 auto;
+							
+							 #map_canvas { 
+					            height: 550px;
+							    right: 1%;
+							    position: absolute !important;
+							    top: 1%;
+							    border: 1px solid #d4d3d3;
+							    border-radius: 1px;
+							    outline-width: 2px;
+							    outline-color: rgba(33, 85, 113, 0.7);
+							    outline-offset: 3px;
+							    outline-style: double;
+							    box-sizing: border-box;
+							    box-shadow: 0px 0px 0px 2px rgba(39, 53, 71, 0.7);
+							    width: 622px;
+							
+					        }//#map-canvas
+					}//geocontainer
+
+				}//right
+				
 			}//geotop
 		}//container	
 	}//#gmap	

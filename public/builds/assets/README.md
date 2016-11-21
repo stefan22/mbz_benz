@@ -3,6 +3,13 @@
 
  <br /> 
   
-  ![workflow-folder screenshot](/mbz1proto.png?raw=true "workflow-folder")
+  ![screenshot1](/mbz1proto.png?raw=true "screenshot1")
+  
+  <hr />
+  
+  <br />
+  
+  
+  ![screenshot2](public/builds/assets/images/screenshot2.png?raw=true "screenshot2")
   
   
