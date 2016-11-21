@@ -140,13 +140,13 @@ header li#active {
 }
 /* line 172, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline {
-  margin: 1.282em 0;
+  margin: 2em 0;
 }
 /* line 174, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox {
   background: rgba(26, 139, 203, 0.7);
   border-radius: 3px;
-  padding: 1em 0;
+  padding: 1.157em 0;
 }
 /* line 178, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap {
@@ -227,7 +227,7 @@ header li#active {
 /* line 276, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro {
   font-family: sans-serif, arial, helvetica;
-  padding: 4em 0;
+  padding: 5em 0;
   height: auto;
   text-align: center;
 }
@@ -236,13 +236,13 @@ header li#active {
   font-size: 36px;
   line-height: 48px;
   color: #ececec;
-  margin: .5em 0;
+  margin: 1em 0;
   font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
 }
 /* line 290, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro {
-  padding: .688em 0;
+  margin: 2.688em 0;
 }
 /* line 292, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro p {

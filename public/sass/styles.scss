@@ -170,11 +170,11 @@ header {
 			
 			    
 			    .headline {
-				    margin: 1.282em 0;
+				    margin: 2em 0;
 				    .shadebox {
 				    	background: rgba(26, 139, 203, 0.7);
 					    border-radius: 3px;
-					    padding: 1em 0;
+					    padding: 1.157em 0;
 				    	.txwrap {
 					    	padding:0 1.5em;
 					    	
@@ -275,7 +275,7 @@ header {
 				.left {
 					.geointro {
 						font-family: $font-family;
-						padding:4em 0;
+						padding:5em 0;
 						height: auto;
 						text-align: center;
 						h1 {
@@ -283,12 +283,12 @@ header {
 						    line-height: (($font*2) + 16px);
 						    color: #ececec;
 						    
-						    margin:.5em 0;
+						    margin:1em 0;
 						    font-family: arial-rounded,sans-serif;
 						    letter-spacing: 1px;
 						}//h1
 						.subgeointro {
-							padding:.688em 0;
+							margin:2.688em 0;
 							p {
 								font-size: $font + 4;
 								line-height: $font + 12;
