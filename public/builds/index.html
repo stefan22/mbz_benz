@@ -5,10 +5,10 @@
 	<title>Single Page App</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1479758688379">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1479858644689">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1479758688379">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1479758688379">		
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1479858644690">
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1479858644690">		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -163,12 +163,12 @@
 
 	</div>  <!--  end of div mainContent   -->  	
 
-		 <script src="bower_components/jquery/dist/jquery.js?rel=1479758688379"></script>
-		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1479758688379"></script>
-		 <script src="bower_components/angular/angular.js?rel=1479758688379"></script>
-		 <script src="bower_components/angular-resource/angular-resource.js?rel=1479758688379"></script>
+		 <script src="bower_components/jquery/dist/jquery.js?rel=1479858644690"></script>
+		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1479858644690"></script>
+		 <script src="bower_components/angular/angular.js?rel=1479858644690"></script>
+		 <script src="bower_components/angular-resource/angular-resource.js?rel=1479858644691"></script>
 		 <script src="bower_components/clipboard/dist/clipboard.js"></script>
-		 <script src="public/builds/js/scripts.min.js?rel=1479758688380"></script>
+		 <script src="public/builds/js/scripts.min.js?rel=1479858644691"></script>
 		 <!-- api key needs to be pass open for tracking purposes. 
 		      I set a couple of domain restrictions in API console - but technically 
 		      an api key isn't needed here. Throws a console error warning without one.
@@ -192,21 +192,18 @@
 	        // for mobile device purposes mostly     
 	           var HIGHACCURACY = true;
 
+	         //could do without it but looks better n constants too  
 	        function getGeoLocation() {
-	            try {
-	                if( !! navigator.geolocation ) {
-	                    return navigator.geolocation;
-	                    
-	                }//if
-	                else {
-	                    return undefined;
-	                }//else
+	        	//test if browser support geolocation
+	        	if (navigator.geolocation) {
+	        		console.log('browser supports geolocation');
+	        		return navigator.geolocation;	
 
-	            }//try 
+	        	} else {
+	        		console.log('browser does NOT support geolocation');
+	        		return undefined;
+	        	}
 
-	            catch(e) {
-	                return undefined;
-	            }
 	        } //getGeoLocation
 
 	        //gets geolocation object from html5 API and gets passed 
@@ -252,25 +249,33 @@
 	        // get call in the event of an error and
 	        // calls stopwatching,test error code and sends an alert
 	        function geo_error(error) {
+	            
 	            stopWatching();
-	            switch(error.code) {
-	                case error.TIMEOUT:
-	                    alert('Geolocation Timeout');
-	                    break;
-	                case error.POSITION_UNAVAILABLE:
-	                    alert('Geolocation Position unavailable');
-	                    break;
-	                case error.PERMISSION_DENIED:
-	                    alert('Geolocation Permission denied');
-	                    break;
-	                default:
-	                    alert('Geolocation returned an unknown error code: ' + error.code);
+
+	            if (error.TIMEOUT) {
+
+	            	alert("Taking too long");
+	            
+	            } else if (error.POSITION_UNAVAILABLE) {
+	            	
+	            	alert("Position unavailable");
+	            
+	            } else if (error.PERMISSION_DENIED) {
+
+	            	alert("User denied Permission");
 	            }
-	        }
+
+	            
+	        } //geo_error
 
 	        function stopWatching() {
-	            if(watchID) geo.clearWatch(watchID);
-	            watchID = null;
+	        	//checks if watchid exists
+	            if(watchID != null) {
+	            	//clears watchID
+	            	geo.clearWatch(watchID);
+	            	//set global var to null
+	            	watchID = null;
+	            }  	
 	        }
 
 	        //calls the geowatchPosition method, and passes constants
