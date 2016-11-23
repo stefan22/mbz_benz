@@ -26,4 +26,4 @@
   <br />
   
   
-  ![screenshot5](public/builds/assets/images/screenshot5.png?raw=true "screenshot5")
+  ![screenshot6](public/builds/assets/images/screenshot6.png?raw=true "screenshot6")
