@@ -3,7 +3,7 @@
 
  <br /> 
   
-  ![screenshot1](/mbz1proto.png?raw=true "screenshot1")
+  ![screenshot7](public/builds/assets/images/screenshot7.png?raw=true "screenshot7")
   
   <hr />
   
