@@ -23,6 +23,22 @@ $font-family: sans-serif,arial,helvetica;
 $footerColor:#273547;
 $mapColor:#2581B8;
 
+/* colors */
+.btn.btn-danger.btn-lg {
+	color: #ffffff;
+	background-color: #b6312c;
+	border-color: #952226;
+}//btn-danger
+.btn.btn-danger.btn-lg:hover {
+    color: #ffffff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}//btn-danger:hover
+
+.btn.btn-danger.btn-lg:focus {
+	border: none;
+	outline: none;
+}
 
 
 body {
@@ -309,15 +325,48 @@ header {
 					    width: 100%;
 					    height: 500px;
 					    margin: 0 auto;
-							
-							 #map_canvas { 
-					            height: 500px;
-							    right: 0%;
-							    position: absolute !important;
-							    top: 0%;
-							    width: 635px;
-							
-					        }//#map-canvas
+					    z-index: 5;
+					    .overlaytophalf {
+					    	height: 18.75em;
+
+					    }//overlaytophalf
+					    .gsearch {
+					    	height: 40%;
+					    	width: 100%;
+					    	background-color: rgba(0,0,0,.8);
+					    	z-index: 5;
+					    	padding:2em 0;
+					    	p {
+					    		z-index: 15;
+							    font-size: 30px;
+							    text-align: center;
+							    letter-spacing: 1.5px;
+							    line-height: 36px;
+							    padding: 0 1em;
+					    	}
+					    	img#geover {
+					    		position: absolute;
+					    		bottom: 0;
+					    		right: 0;
+					    		display: block;
+					    		z-index: -1;
+					    	}//geover
+					    	#geolocbut {
+					    		position: absolute;
+					    		top: 15%;
+					    		left: 2%;
+					    		z-index: 25;
+					    		
+					    	}//geolocbut
+					    }//gsearch	
+						#map_canvas { 
+				            height: 500px;
+						    right: 0%;
+						    position: absolute !important;
+						    bottom: 0%;
+						    width: 635px;
+						
+				        }//#map-canvas
 					}//geocontainer
 
 				}//right
@@ -326,7 +375,33 @@ header {
 		}//container	
 	}//#gmap	
 		
-		
+	#apidatasection {
+		.mainmiddle {
+			.innermid {
+				.apresults {
+					.apresbody {
+						h1 {
+							font-size: (($font*2)+ 4px);
+						    line-height: (($font*2) + 16px);
+						    color: #ececec;			
+						}//h1
+						p {
+							font-size: $font + 4;
+							line-height: $font + 12;
+							color:$pinkish;
+							margin: .5em 0;
+
+						}//p
+
+					}//apresbody
+
+				}//apresults
+
+			}//innermid
+
+		}//mainmiddle
+
+	}//apidatasection	
 		
 
 

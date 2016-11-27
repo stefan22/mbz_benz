@@ -6,13 +6,34 @@ _______________________________________*/
 /*
 
 */
-/* line 28, ../../sass/styles.scss */
+/* colors */
+/* line 27, ../../sass/styles.scss */
+.btn.btn-danger.btn-lg {
+  color: #ffffff;
+  background-color: #b6312c;
+  border-color: #952226;
+}
+
+/* line 32, ../../sass/styles.scss */
+.btn.btn-danger.btn-lg:hover {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+/* line 38, ../../sass/styles.scss */
+.btn.btn-danger.btn-lg:focus {
+  border: none;
+  outline: none;
+}
+
+/* line 44, ../../sass/styles.scss */
 body {
   font-size: 16px;
   font-family: sans-serif, arial, helvetica;
 }
 
-/* line 35, ../../sass/styles.scss */
+/* line 51, ../../sass/styles.scss */
 p {
   font-family: sans-serif;
   font-weight: 300;
@@ -21,22 +42,22 @@ p {
   color: #666666;
 }
 
-/* line 43, ../../sass/styles.scss */
+/* line 59, ../../sass/styles.scss */
 header {
   background-color: #8c1c20;
   padding: 3.5em 0;
   border-bottom: 1px solid rgba(71, 20, 22, 0.75);
 }
-/* line 47, ../../sass/styles.scss */
+/* line 63, ../../sass/styles.scss */
 header nav.navbar.navbar-inverse.navbar-fixed-top {
   background-color: #8c1c20;
 }
-/* line 50, ../../sass/styles.scss */
+/* line 66, ../../sass/styles.scss */
 header .navbar-inverse .navbar-nav > li > a {
   color: #e6e6e6;
   text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
 }
-/* line 54, ../../sass/styles.scss */
+/* line 70, ../../sass/styles.scss */
 header .navbar-inverse .navbar-nav > .open > a, header .navbar-inverse
 .navbar-nav > .open > a:hover, header .navbar-inverse .navbar-nav > .open > a:focus,
 header li.dropdown.open a.dropdown-toggle {
@@ -44,26 +65,26 @@ header li.dropdown.open a.dropdown-toggle {
   text-shadow: 0px -1px 1px rgba(48, 72, 86, 0.75);
   background-color: #8c1c20;
 }
-/* line 63, ../../sass/styles.scss */
+/* line 79, ../../sass/styles.scss */
 header .navbar {
   padding: 1.5em 0 1.5em;
   border: none;
   margin-bottom: 0;
 }
-/* line 67, ../../sass/styles.scss */
+/* line 83, ../../sass/styles.scss */
 header .navbar .logogit.brandz {
   height: auto;
 }
-/* line 69, ../../sass/styles.scss */
+/* line 85, ../../sass/styles.scss */
 header .navbar .logogit.brandz .navbar-header {
   display: inline-block;
   float: right;
 }
-/* line 73, ../../sass/styles.scss */
+/* line 89, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img {
   height: 60px;
 }
-/* line 77, ../../sass/styles.scss */
+/* line 93, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img h1 {
   display: inline-block !important;
   margin: 0 auto;
@@ -76,7 +97,7 @@ header .navbar .logogit.brandz div.subheader-img h1 {
   margin-left: 1em;
   text-shadow: 0px -1px 0px #524747;
 }
-/* line 91, ../../sass/styles.scss */
+/* line 107, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img img.img-responsive {
   display: inline-block !important;
   margin: 0 auto;
@@ -88,11 +109,11 @@ header .navbar .logogit.brandz div.subheader-img img.img-responsive {
   border: 1px solid rgba(70, 7, 7, 0.8);
   border-radius: 50%;
 }
-/* line 108, ../../sass/styles.scss */
+/* line 124, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li.active a {
   background-color: transparent !important;
 }
-/* line 113, ../../sass/styles.scss */
+/* line 129, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li {
   font-size: 22px;
   line-height: 26px;
@@ -100,32 +121,32 @@ header ul.nav.navbar-nav > li {
   font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
 }
-/* line 119, ../../sass/styles.scss */
+/* line 135, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li a {
   padding-top: 24px;
 }
-/* line 127, ../../sass/styles.scss */
+/* line 143, ../../sass/styles.scss */
 header .navbar-right.sopra {
   padding-right: 1em;
   position: fixed;
   right: 15%;
   top: 2.45%;
 }
-/* line 135, ../../sass/styles.scss */
+/* line 151, ../../sass/styles.scss */
 header li#contact {
   margin-right: 17px;
 }
-/* line 139, ../../sass/styles.scss */
+/* line 155, ../../sass/styles.scss */
 header li#active {
   margin-right: 17px;
 }
 
-/* line 150, ../../sass/styles.scss */
+/* line 166, ../../sass/styles.scss */
 .mainContent #mainheading {
   background-color: #1D4E69;
   height: 330px;
 }
-/* line 156, ../../sass/styles.scss */
+/* line 172, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .maintopimg {
   background: url(../assets/images/collaboration-security.svg) no-repeat;
   background-position: 3px 62px;
@@ -138,21 +159,21 @@ header li#active {
   background-color: #1d4e69;
   margin: 0em 0 0 0;
 }
-/* line 172, ../../sass/styles.scss */
+/* line 188, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline {
   margin: 2em 0;
 }
-/* line 174, ../../sass/styles.scss */
+/* line 190, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox {
   background: rgba(26, 139, 203, 0.7);
   border-radius: 3px;
   padding: 1.157em 0;
 }
-/* line 178, ../../sass/styles.scss */
+/* line 194, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap {
   padding: 0 1.5em;
 }
-/* line 181, ../../sass/styles.scss */
+/* line 197, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap h3 {
   font-size: 24px;
   line-height: 38px;
@@ -161,7 +182,7 @@ header li#active {
   font-family: sans-serif, arial, helvetica;
   letter-spacing: 1px;
 }
-/* line 189, ../../sass/styles.scss */
+/* line 205, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap p {
   font-size: 20px;
   line-height: 28px;
@@ -170,68 +191,68 @@ header li#active {
   font-weight: 300;
   margin: .5em 0;
 }
-/* line 210, ../../sass/styles.scss */
+/* line 226, ../../sass/styles.scss */
 .mainContent #apidatasection {
   background-color: #273547;
 }
-/* line 213, ../../sass/styles.scss */
+/* line 229, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle {
   margin: 2em 0;
   overflow: auto;
 }
-/* line 217, ../../sass/styles.scss */
+/* line 233, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid {
   padding: 0 2em;
   border: 1px solid #d1d1d1;
 }
-/* line 220, ../../sass/styles.scss */
+/* line 236, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults {
   min-height: 220px;
   max-width: 981px;
   margin: 0 auto;
 }
-/* line 224, ../../sass/styles.scss */
+/* line 240, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody {
   margin: 2em 0;
 }
-/* line 226, ../../sass/styles.scss */
+/* line 242, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody h2 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: .5em;
 }
-/* line 243, ../../sass/styles.scss */
+/* line 259, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid #clipboard {
   text-align: center;
   margin: 2em 0;
   padding: 1em 0;
   border-bottom: 1px dotted #d4d4d4;
 }
-/* line 250, ../../sass/styles.scss */
+/* line 266, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea {
   margin: 1em 0;
 }
-/* line 252, ../../sass/styles.scss */
+/* line 268, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea h2 {
   font-size: 32px;
   margin: .5em 0;
 }
-/* line 256, ../../sass/styles.scss */
+/* line 272, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea p {
   margin: .5em 0;
 }
-/* line 270, ../../sass/styles.scss */
+/* line 286, ../../sass/styles.scss */
 .mainContent #gmap {
   background-color: #1A8BCB;
 }
-/* line 276, ../../sass/styles.scss */
+/* line 292, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro {
   font-family: sans-serif, arial, helvetica;
   padding: 5em 0;
   height: auto;
   text-align: center;
 }
-/* line 281, ../../sass/styles.scss */
+/* line 297, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro h1 {
   font-size: 36px;
   line-height: 48px;
@@ -240,29 +261,79 @@ header li#active {
   font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
 }
-/* line 290, ../../sass/styles.scss */
+/* line 306, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro {
   margin: 2.688em 0;
 }
-/* line 292, ../../sass/styles.scss */
+/* line 308, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro p {
   font-size: 20px;
   line-height: 28px;
   color: #e6e6e6;
   margin: .5em 0;
 }
-/* line 307, ../../sass/styles.scss */
+/* line 323, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer {
   position: relative;
   width: 100%;
   height: 500px;
   margin: 0 auto;
+  z-index: 5;
 }
-/* line 313, ../../sass/styles.scss */
+/* line 329, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .right .geocontainer .overlaytophalf {
+  height: 18.75em;
+}
+/* line 333, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .right .geocontainer .gsearch {
+  height: 40%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  padding: 2em 0;
+}
+/* line 339, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .right .geocontainer .gsearch p {
+  z-index: 15;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 36px;
+  padding: 0 1em;
+}
+/* line 347, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .right .geocontainer .gsearch img#geover {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: -1;
+}
+/* line 354, ../../sass/styles.scss */
+.mainContent #gmap .container .geotop .right .geocontainer .gsearch #geolocbut {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  z-index: 25;
+}
+/* line 362, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer #map_canvas {
   height: 500px;
   right: 0%;
   position: absolute !important;
-  top: 0%;
+  bottom: 0%;
   width: 635px;
+}
+/* line 383, ../../sass/styles.scss */
+.mainContent #apidatasection .mainmiddle .innermid .apresults .apresbody h1 {
+  font-size: 36px;
+  line-height: 48px;
+  color: #ececec;
+}
+/* line 388, ../../sass/styles.scss */
+.mainContent #apidatasection .mainmiddle .innermid .apresults .apresbody p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #e6e6e6;
+  margin: .5em 0;
 }

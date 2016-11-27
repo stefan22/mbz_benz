@@ -93,7 +93,7 @@ $(function() {
 		}// if greater than zero
 
 		document.getElementById('apidat').innerHTML = newsubarray;
-		var apidatexplan = document.getElementById('apidatexplan').innerHTML += 'right now it returns the sum of the last two object sub-arrays for temperature \n but before that I\'ve removed the strings array';
+		var apidatexplan = document.getElementById('apidatexplan').innerHTML += "removed strings from array and right now it returns the sum of the last two sub-arrays for the temperature/data-json Api I extracted \n ";
 	
 	} //returnData
 

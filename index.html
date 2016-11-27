@@ -5,10 +5,10 @@
 	<title>Single Page App</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1479858644689">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1480243526775">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1479858644690">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1479858644690">		
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1480243526775">
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1480243526775">		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -110,6 +110,16 @@
 					
 							<div class="col-md-7 col-md-offset-1 pull-right right">
 								<div class="geocontainer">
+									<div class="overlaytophalf"></div>
+									<div class="gsearch" id="geolay">
+										<p id="geonotice">To find all dealerships near your current
+										location, click the search button above</p>
+										<img id="geover" src="public/builds/assets/images/geomap.png">
+										<button type="button" id="geolocbut" class="btn btn-danger btn-lg">
+										Search from current location
+										</button>
+									</div>  <!--  end of div search   -->  	
+
 							        <div id="map_canvas"></div>    
 							    </div>  <!--  end of div geocontainer   -->   
 							</div>  <!--  end of div col-md-6   -->  
@@ -127,9 +137,10 @@
 					<div class="col-lg-12 innermid">
 						<div class="apresults">
 						  <div class="apresbody">
-						  	 <h2>RESults</h2>
+						  	 <h1>RESults</h1>
+						  	 <p>On hold for now - data for chart - then i'll get the average temp per day and that will go on the chart</p>
 						  	 <p id="apidatexplan"></p>
-							 <textarea rows="30" cols="96" id="apidat">
+							 <textarea rows="30" cols="118" id="apidat">
 								
 								<!-- apidata goes here -->
 
@@ -163,17 +174,18 @@
 
 	</div>  <!--  end of div mainContent   -->  	
 
-		 <script src="bower_components/jquery/dist/jquery.js?rel=1479858644690"></script>
-		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1479858644690"></script>
-		 <script src="bower_components/angular/angular.js?rel=1479858644690"></script>
-		 <script src="bower_components/angular-resource/angular-resource.js?rel=1479858644691"></script>
+		 <script src="bower_components/jquery/dist/jquery.js?rel=1480243526775"></script>
+		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1480243526775"></script>
+		 <script src="bower_components/angular/angular.js?rel=1480243526776"></script>
+		 <script src="bower_components/angular-resource/angular-resource.js?rel=1480243526776"></script>
 		 <script src="bower_components/clipboard/dist/clipboard.js"></script>
-		 <script src="public/builds/js/scripts.min.js?rel=1479858644691"></script>
+		 <script src="public/builds/js/scripts.min.js?rel=1480243526776"></script>
 		 <!-- api key needs to be pass open for tracking purposes. 
-		      I set a couple of domain restrictions in API console - but technically 
-		      an api key isn't needed here. Throws a console error warning without one.
+		      w/restrictions set on api console(according to google) - but technically 
+		      an api key isn't needed here -at least for testing purposes -it throws
+		      a console error warning but works.
 		  -->
-		 <script type="text/javascript" src="http://maps.google.com/maps/api/js?&key=AIzaSyDa8v5e9DMd3vGd81nBMQddCejXYlIvcFk"></script>
+		 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	    <script type="text/javascript">
 	    	/* html5 geolocation api to get coordinates and continuous watching.
 	    	   Google map/marker to point out location	*/
@@ -191,6 +203,44 @@
 	           var TIMEOUT = 300000;      // 5minutes
 	        // for mobile device purposes mostly     
 	           var HIGHACCURACY = true;
+
+	        //for styles with toggle
+	        var targets = ['geover', 'geolocbut', 'geolay', 'geonotice'];
+
+	       	var toggle = {
+				
+	       		remove: function() {
+	       				for (var i=0; i< targets.length; i++) {
+	       					//get elements and remove styles
+	       					if(targets[i] == 'geolay') {
+	       						document.getElementById(targets[i]).style.backgroundColor = 'transparent';
+	       					} else {
+	       						//the others are display of none
+	       						document.getElementById(targets[i]).style.display = 'none';
+	       					}
+		  					
+	       				}//for
+	       				
+		  			    return;
+	       		},//remove
+
+	       		add: function() {
+	       				//get elements and add back styles whenever whatching stops
+	       				for (var i =0; i<targets.length; i++) {
+	       					if(targets[i] == 'geolay') {
+	       						document.getElementById(targets[i]).style.backgroundColor= "rgba(0,0,0,.8)";
+	       					}//if
+	       					//for everyone else display block
+	       					else {
+	       						document.getElementById(targets[i]).style.display="block";
+	       					}
+
+	       				}//for
+	       				return;
+	       		}//add
+
+	       	}//toggle			
+	       				   
 
 	         //could do without it but looks better n constants too  
 	        function getGeoLocation() {
@@ -255,18 +305,64 @@
 	            if (error.TIMEOUT) {
 
 	            	alert("Taking too long");
+	            	toggle.add();
 	            
 	            } else if (error.POSITION_UNAVAILABLE) {
 	            	
 	            	alert("Position unavailable");
+	            	toggle.add();
 	            
 	            } else if (error.PERMISSION_DENIED) {
 
 	            	alert("User denied Permission");
+	            	toggle.add();
 	            }
 
 	            
 	        } //geo_error
+
+
+	        
+	       				
+	       				
+	       						 
+	       					
+	       						
+	       				
+	       					
+	       						
+	       				
+	       				
+	       			
+
+	      
+	        
+
+		        	
+
+	/*	        	
+	        	
+	       var addProps = function() {
+		        		var geoover = document.getElementById('geover').style.display = "block";
+		        		var geolocbut = document.getElementById('geolocbut').style.display = "block";
+		        		var geolay = document.getElementById('geolay').style.backgroundColor = "rgba(0,0,0,.8)";
+		        		var geonotice = document.getElementById('geonotice').style.display = 'block';
+		        		};
+
+		        	return addProps();	
+
+	        
+*/
+	        		
+
+	        
+	        		
+	        		
+
+
+	      
+
+
 
 	        function stopWatching() {
 	        	//checks if watchid exists
@@ -275,6 +371,9 @@
 	            	geo.clearWatch(watchID);
 	            	//set global var to null
 	            	watchID = null;
+	            	//bring back overlay
+	            	toggle.add();
+	            	
 	            }  	
 	        }
 
@@ -285,8 +384,14 @@
 	                maximumAge: MAXIMUM_AGE,
 	                timeout: TIMEOUT
 	            });
+	            toggle.remove();
+	           
 	        }
 
+
+	     
+
+	        /*
 	        window.onload = function() {
 	            if((geo = getGeoLocation())) {
 	                startWatching();
@@ -294,6 +399,27 @@
 	                alert('Geolocation not supported.')
 	            }
 	        }
+	        */
+
+	        function init() {
+	        	if (geo = getGeoLocation()) {
+	        		startWatching();
+	        		
+	        	} else {
+	        		alert('Geolocation not supported');
+	        		toggle.add();
+	        	}
+	        }
+
+
+	        var geolocbut = document.getElementById('geolocbut');
+
+	        geolocbut.addEventListener('click', init, true);
+
+
+
+
+
 	    </script>  
 	</body>
 </html>
