@@ -5,10 +5,10 @@
 	<title>Single Page App</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1480243875307">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1480271497965">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1480243875307">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1480243875307">		
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1480271497965">
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1480271497966">		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -110,7 +110,11 @@
 					
 							<div class="col-md-7 col-md-offset-1 pull-right right">
 								<div class="geocontainer">
-									<div class="overlaytophalf"></div>
+									<div class="overlaytophalf">
+										<div id="loadinggif">
+											<img id="loading-image" src="public/builds/assets/images/loading.gif">
+										</div>  <!--  end of div loadinggif   -->  	
+									</div>
 									<div class="gsearch" id="geolay">
 										<p id="geonotice">To find all dealerships near your current
 										location, click the search button above</p>
@@ -173,13 +177,18 @@
 		
 
 	</div>  <!--  end of div mainContent   -->  	
-
-		 <script src="bower_components/jquery/dist/jquery.js?rel=1480243875307"></script>
-		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1480243875308"></script>
-		 <script src="bower_components/angular/angular.js?rel=1480243875308"></script>
-		 <script src="bower_components/angular-resource/angular-resource.js?rel=1480243875308"></script>
+		 <script src="bower_components/jquery/dist/jquery.js?rel=1480271497966"></script>
+		 <script type="text/javascript">
+			$(window).on('load', function() {
+				$('#loadinggif').hide();
+				$('#loading-image').hide();
+			});
+		</script>
+		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1480271497966"></script>
+		 <script src="bower_components/angular/angular.js?rel=1480271497966"></script>
+		 <script src="bower_components/angular-resource/angular-resource.js?rel=1480271497966"></script>
 		 <script src="bower_components/clipboard/dist/clipboard.js"></script>
-		 <script src="public/builds/js/scripts.min.js?rel=1480243875308"></script>
+		 <script src="public/builds/js/scripts.min.js?rel=1480271497966"></script>
 		 <!-- api key needs to be pass open for tracking purposes. 
 		      w/restrictions set on api console(according to google) - but technically 
 		      an api key isn't needed here -at least for testing purposes -it throws
@@ -206,8 +215,12 @@
 	        // for mobile device purposes mostly     
 	           var HIGHACCURACY = true;
 
-	        //for styles with toggle
-	        var targets = ['geover', 'geolocbut', 'geolay', 'geonotice'];
+	        //for styles with toggle -targets ids
+	        //geover removed from list of targets -goes to the background -it looks better
+	        //at loading
+	        //an even better way is load map at page load and simply change the z-index
+	        //which gives the impression of loading almost immediately 
+	        var targets = ['geolocbut', 'geolay', 'geonotice'];
 
 	       	var toggle = {
 				
@@ -293,6 +306,10 @@
 	                    title:"You can RUN\n but You can NEVER HIDE!"
 	                });
 	                mapMarker.setMap(map);
+	                if (map) {
+	                	$('#loadinggif').hide();
+						$('#loading-image').hide();
+	                }
 	            
 	            }//else
 
@@ -386,6 +403,7 @@
 	                maximumAge: MAXIMUM_AGE,
 	                timeout: TIMEOUT
 	            });
+	            
 	            toggle.remove();
 	           
 	        }
@@ -405,6 +423,8 @@
 
 	        function init() {
 	        	if (geo = getGeoLocation()) {
+	        		$('#loadinggif').show();
+					$('#loading-image').show();
 	        		startWatching();
 	        		
 	        	} else {
