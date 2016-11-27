@@ -3,7 +3,7 @@
 
  <br /> 
   
-  ![screenshot1](/mbz1proto.png?raw=true "screenshot1")
+  ![screenshot7](public/builds/assets/images/screenshot7.png?raw=true "screenshot7")
   
   <hr />
   
@@ -27,3 +27,11 @@
   
   
   ![screenshot6](public/builds/assets/images/screenshot6.png?raw=true "screenshot6")
+  
+  
+ <hr />
+  
+  <br />
+  
+  
+  ![screenshot8](public/builds/assets/images/screenshot8.png?raw=true "screenshot8")

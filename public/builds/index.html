@@ -5,10 +5,10 @@
 	<title>Single Page App</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1480271497965">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css?rel=1480274636679">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1480271497965">
-	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1480271497966">		
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/reset.css?rel=1480274636679">
+	<link rel="stylesheet" type="text/css" href="/public/builds/css/styles.css?rel=1480274636679">		
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -177,18 +177,20 @@
 		
 
 	</div>  <!--  end of div mainContent   -->  	
-		 <script src="bower_components/jquery/dist/jquery.js?rel=1480271497966"></script>
+		 <script src="bower_components/jquery/dist/jquery.js?rel=1480274636679"></script>
 		 <script type="text/javascript">
-			$(window).on('load', function() {
-				$('#loadinggif').hide();
+		 	$(document).ready(function() {
+		 		//on doc.ready cause on load will load img on refresh too
+		 		//default behaviour
+		 		$('#loadinggif').hide();
 				$('#loading-image').hide();
-			});
+		 	});
 		</script>
-		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1480271497966"></script>
-		 <script src="bower_components/angular/angular.js?rel=1480271497966"></script>
-		 <script src="bower_components/angular-resource/angular-resource.js?rel=1480271497966"></script>
+		 <script src="bower_components/bootstrap/dist/js/bootstrap.js?rel=1480274636680"></script>
+		 <script src="bower_components/angular/angular.js?rel=1480274636680"></script>
+		 <script src="bower_components/angular-resource/angular-resource.js?rel=1480274636680"></script>
 		 <script src="bower_components/clipboard/dist/clipboard.js"></script>
-		 <script src="public/builds/js/scripts.min.js?rel=1480271497966"></script>
+		 <script src="public/builds/js/scripts.min.js?rel=1480274636680"></script>
 		 <!-- api key needs to be pass open for tracking purposes. 
 		      w/restrictions set on api console(according to google) - but technically 
 		      an api key isn't needed here -at least for testing purposes -it throws
@@ -271,6 +273,18 @@
 
 	        } //getGeoLocation
 
+	        //animated gif file calls
+	        //show as function expression
+	 		var gifShow = function() {
+	 			$('#loadinggif').show();
+				$('#loading-image').show();
+	 		};
+		 	//gifHide as a function expression	
+	 		var gifHide = function() {
+	 			$('#loadinggif').hide();
+				$('#loading-image').hide();
+	 		};
+
 	        //gets geolocation object from html5 API and gets passed 
 	        //to the geowatchposition method
 	        function show_map(position) {
@@ -307,8 +321,7 @@
 	                });
 	                mapMarker.setMap(map);
 	                if (map) {
-	                	$('#loadinggif').hide();
-						$('#loading-image').hide();
+	                	gifHide();
 	                }
 	            
 	            }//else
@@ -325,16 +338,19 @@
 
 	            	alert("Taking too long");
 	            	toggle.add();
+	            	gifHide();
 	            
 	            } else if (error.POSITION_UNAVAILABLE) {
 	            	
 	            	alert("Position unavailable");
 	            	toggle.add();
+	            	gifHide();
 	            
 	            } else if (error.PERMISSION_DENIED) {
 
 	            	alert("User denied Permission");
 	            	toggle.add();
+	            	gifHide();
 	            }
 
 	            
@@ -392,6 +408,8 @@
 	            	watchID = null;
 	            	//bring back overlay
 	            	toggle.add();
+	            	//hides imggif file
+	            	gifHide();
 	            	
 	            }  	
 	        }
@@ -423,8 +441,7 @@
 
 	        function init() {
 	        	if (geo = getGeoLocation()) {
-	        		$('#loadinggif').show();
-					$('#loading-image').show();
+	        		gifShow();
 	        		startWatching();
 	        		
 	        	} else {
