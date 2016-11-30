@@ -1,4 +1,7 @@
 $(function() {
+	
+	
+    
 
 	//gets the average presure,speed and temp from an array of
 	//num-decimals
@@ -19,6 +22,7 @@ $(function() {
 	//getAvg(test);
 
 
+
 	
 
 
@@ -36,6 +40,7 @@ $(function() {
 
 		//parsing data
 		for (var key in data) {
+					
 			//if property belongs to object
 			if(data.hasOwnProperty) {
 				if((data[key].t !== null) && (data[key].p !== null) && 
@@ -52,15 +57,18 @@ $(function() {
 			
 		}//for key in data
 
-		console.log(retDates);
+		//console.log(retDates);
 		console.log(retTemp);
-		console.log(retPres);
-		console.log(retSped);
+		//console.log(retPres);
+		//console.log(retSped);
 		
-		// just retTemp data
-		var removed = [];
-		var newsubarray = [];
+		
+		
+		
 		if (retTemp.length > 0) {
+			var newsubarray = new Array();
+			var removed = [];
+			debugger;
 			//console.log(retTemp.length); //length is 3
 			for (var i=0; i < retTemp.length; i++) {
 				//all three sub arrays
@@ -76,8 +84,24 @@ $(function() {
 						
 					} //if
 					else {
+
+							//converts string into a numb
+							var num = parseInt(subarray[y]);
+							//if a number then add to obj/array
+							if (Number.isInteger(num)) {
+
+								newsubarray += num + '+ ';
+
+							} else {
+								console.log('WTF!!!!!!!!!!');
+							}
+
 						//need to separate numbers
-						newsubarray += subarray[y] + ', ';
+						//newsubarray += parseInt(subarray[y]) + '+ ';
+						console.log(typeof newsubarray);
+						console.log(newsubarray);
+
+
 
 					}//else push them to a new object array
 					
@@ -86,14 +110,26 @@ $(function() {
 				
 				
 			}//outer loop
-			console.log(removed); //removes avg temp string
-			console.log(newsubarray); //add other two arrays into one single array
+			
+			//going to use redue to add values and remove first/last strings
+
+			
+
+
+
+			
+
+
+			//console.log("what is my average " + newsubarray);
+			
+			//console.log(removed); //removes avg temp string
+			//console.log("this is new temp array minus strings" + newsubarray); //add other two arrays into one single array
 
 
 		}// if greater than zero
 
 		document.getElementById('apidat').innerHTML = newsubarray;
-		var apidatexplan = document.getElementById('apidatexplan').innerHTML += "removed strings from array and right now it returns the sum of the last two sub-arrays for the temperature/data-json Api I extracted \n ";
+		var apidatexplan = document.getElementById('apidatexplan').innerHTML += "This is temp returned data minus strings  or last two sub-arrays for the temperature/data-json Api I extracted \n ";
 	
 	} //returnData
 
