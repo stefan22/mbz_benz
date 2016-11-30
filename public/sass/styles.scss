@@ -1,3 +1,10 @@
+@import "compass";
+@import "susy";
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "colors";
+
 
 
 /* 
@@ -7,38 +14,21 @@
 _______________________________________*/
 /*
 
+body {
+	lighten($black, 20);
+	darken($white, 20);
+	rgba($darblue,.20); //from hexadecimals
+}
+
 */
 
-$font:16px;
-$white:#ffffff;
-$colorwhite:#fafafa;
-$colorTitle:#333;
-$colorDarker:#101010;
-$colorPara:#666666;
-$pinkish:#e6e6e6;
 
+$font:16px;
 
 $font-family: sans-serif,arial,helvetica;
 
-$footerColor:#273547;
-$mapColor:#2581B8;
 
-/* colors */
-.btn.btn-danger.btn-lg {
-	color: #ffffff;
-	background-color: #b6312c;
-	border-color: #952226;
-}//btn-danger
-.btn.btn-danger.btn-lg:hover {
-    color: #ffffff;
-    background-color: #c9302c;
-    border-color: #ac2925;
-}//btn-danger:hover
 
-.btn.btn-danger.btn-lg:focus {
-	border: none;
-	outline: none;
-}
 
 
 body {
@@ -47,7 +37,7 @@ body {
 
 }
 
-/* loading image */
+
 
 
 
