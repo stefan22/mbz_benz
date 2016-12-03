@@ -1,8 +1,5 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* line 6, ../../sass/reset.scss */
+@import url("https://fonts.googleapis.com/css?family=Nobile");
+/* line 5, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,65 +16,69 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-/* line 28, ../../sass/reset.scss */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* line 36, ../../sass/reset.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-/* line 39, ../../sass/reset.scss */
-body {
+/* line 22, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
   line-height: 1;
 }
 
-/* line 42, ../../sass/reset.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 45, ../../sass/reset.scss */
-blockquote, q {
-  quotes: none;
-}
-/* line 47, ../../sass/reset.scss */
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none;
-}
-
-/* line 52, ../../sass/reset.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/*=================================
+/* line 28, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
 
- *** ALL COLORS **** 
+/* line 30, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
 
-	1. Headings     
-	2. Subheadings 
-	3. backgrounds  
-	4. links
-	5. paragraphs   
-	6. buttons
+/* line 32, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
 
-===================================*/
+/* line 116, ../../../../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* =================================
+
+ *** Solarized palette **** 
+     -----------------	
+	/* monotones go from dark to light 
+	    
+	    bgcolors dark
+	    -------------               */
+/* content tones
+   -------------                */
+/* bg colors light
+   ---------------              */
+/* accent colors
+   -------------                */
+/* ==================================== */
 /* 1. Headings colors			
 =====================*/
 /* subheadings */
@@ -98,6 +99,24 @@ table {
 /*large red button*/
 /*footer
 ========*/
+/* Fonts
+=================== */
+/* compas-mixin border-radius
+-----------------                        						*/
+/* line 6, ../../sass/mixins.scss */
+.border-radius {
+  -moz-border-radius: 5px / 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px / 5px;
+}
+
+/* compass-mixin text-shadow 
+--------------------------                                      */
+/* line 19, ../../sass/mixins.scss */
+.single-text-shadow {
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
+}
+
 /* 
 ---------------------------------------
  		*** Styles.css ***
@@ -105,77 +124,85 @@ table {
 _______________________________________
 
 */
-/* line 27, ../../sass/styles.scss */
+/* line 19, ../../sass/styles.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nobile", sans-serif, arial, georgia, verdana;
+}
+
+/* line 23, ../../sass/styles.scss */
+p, button {
+  font-family: "Roboto+Mono", sans-serif, arial, georgia, verdana;
+}
+
+/* line 35, ../../sass/styles.scss */
 body {
   font-size: 16px;
   font-family: sans-serif, arial, helvetica;
 }
 
-/* line 41, ../../sass/styles.scss */
+/* line 49, ../../sass/styles.scss */
 p {
-  font-family: sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
-  color: #e6e6e6;
+  color: #f2f4f4;
 }
 
-/* line 49, ../../sass/styles.scss */
+/* line 57, ../../sass/styles.scss */
 header {
-  background-color: #8c1c20;
+  background-color: #b9221f;
   padding: 3.5em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.75);
 }
-/* line 53, ../../sass/styles.scss */
+/* line 61, ../../sass/styles.scss */
 header nav.navbar.navbar-inverse.navbar-fixed-top {
-  background-color: #8c1c20;
+  background-color: #b9221f;
 }
-/* line 56, ../../sass/styles.scss */
+/* line 64, ../../sass/styles.scss */
 header .navbar-inverse .navbar-nav > li > a {
-  color: #e6e6e6;
-  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.75);
+  color: #f2f4f4;
+  text-shadow-text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 60, ../../sass/styles.scss */
+/* line 68, ../../sass/styles.scss */
 header .navbar-inverse .navbar-nav > .open > a, header .navbar-inverse
 .navbar-nav > .open > a:hover, header .navbar-inverse .navbar-nav > .open > a:focus,
 header li.dropdown.open a.dropdown-toggle {
-  color: #ffffff;
+  color: #f2f4f4;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.75);
-  background-color: #ffffff;
+  background-color: #f2f4f4;
 }
-/* line 69, ../../sass/styles.scss */
+/* line 77, ../../sass/styles.scss */
 header .navbar {
   padding: 1.5em 0 1.5em;
   border: none;
   margin-bottom: 0;
 }
-/* line 73, ../../sass/styles.scss */
+/* line 81, ../../sass/styles.scss */
 header .navbar .logogit.brandz {
   height: auto;
 }
-/* line 75, ../../sass/styles.scss */
+/* line 83, ../../sass/styles.scss */
 header .navbar .logogit.brandz .navbar-header {
   display: inline-block;
   float: right;
 }
-/* line 79, ../../sass/styles.scss */
+/* line 87, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img {
   height: 60px;
 }
-/* line 83, ../../sass/styles.scss */
+/* line 91, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img h1 {
   display: inline-block !important;
   margin: 0 auto;
   font-size: 36px;
   line-height: 48px;
   vertical-align: middle;
-  font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #f2f4f4;
   margin-left: 1em;
-  text-shadow: 0px -1px 0px #4d4d4d;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 97, ../../sass/styles.scss */
+/* line 105, ../../sass/styles.scss */
 header .navbar .logogit.brandz div.subheader-img img.img-responsive {
   display: inline-block !important;
   margin: 0 auto;
@@ -185,172 +212,180 @@ header .navbar .logogit.brandz div.subheader-img img.img-responsive {
   background: rgba(26, 139, 203, 0.9);
   box-shadow: 0px 0px 1px 2px rgba(140, 28, 32, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+  -moz-border-radius: 50% / 50%;
+  -webkit-border-radius: 50% 50%;
+  border-radius: 50% / 50%;
 }
-/* line 114, ../../sass/styles.scss */
+/* line 122, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li.active a {
   background-color: transparent !important;
 }
-/* line 119, ../../sass/styles.scss */
+/* line 127, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li {
   font-size: 22px;
   line-height: 26px;
   font-weight: normal;
-  font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 125, ../../sass/styles.scss */
+/* line 134, ../../sass/styles.scss */
 header ul.nav.navbar-nav > li a {
   padding-top: 24px;
 }
-/* line 133, ../../sass/styles.scss */
+/* line 142, ../../sass/styles.scss */
 header .navbar-right.sopra {
   padding-right: 1em;
   position: fixed;
   right: 15%;
   top: 2.45%;
 }
-/* line 141, ../../sass/styles.scss */
+/* line 150, ../../sass/styles.scss */
 header li#contact {
   margin-right: 17px;
 }
-/* line 145, ../../sass/styles.scss */
+/* line 154, ../../sass/styles.scss */
 header li#active {
   margin-right: 17px;
 }
 
-/* line 156, ../../sass/styles.scss */
+/* line 165, ../../sass/styles.scss */
 .mainContent #mainheading {
-  background-color: #1D4E69;
+  background-color: #073642;
   height: 330px;
 }
-/* line 162, ../../sass/styles.scss */
+/* line 171, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .maintopimg {
-  background: url(../assets/images/collaboration-security.svg) no-repeat;
-  background-position: 3px 62px;
-  background-color: rgba(29, 78, 105, 0.1);
+  background: url(../assets/images/collaboration-security.png) no-repeat;
+  background-position: 3px 66px;
   height: 329px;
   width: 100%;
-  text-shadow: 0 0px 1px rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #f2f4f4;
   border-top: 0;
-  background-color: #1D4E69;
   margin: 0em 0 0 0;
 }
-/* line 178, ../../sass/styles.scss */
+/* line 184, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline {
   margin: 2em 0;
 }
-/* line 180, ../../sass/styles.scss */
+/* line 186, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox {
-  background: rgba(26, 139, 203, 0.7);
-  border-radius: 3px;
+  background: #3f9cdc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   padding: 1.157em 0;
 }
-/* line 184, ../../sass/styles.scss */
+/* line 190, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap {
   padding: 0 1.5em;
 }
-/* line 187, ../../sass/styles.scss */
+/* line 193, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap h3 {
   font-size: 24px;
   line-height: 38px;
-  color: #ffffff;
+  color: white;
   margin-bottom: .5em;
-  font-family: sans-serif, arial, helvetica;
+  font-family: "Nobile", sans-serif, arial, georgia, verdana;
   letter-spacing: 1px;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 195, ../../sass/styles.scss */
+/* line 202, ../../sass/styles.scss */
 .mainContent #mainheading .container .maintop .headline .shadebox .txwrap p {
   font-size: 20px;
   line-height: 28px;
-  color: #e6e6e6;
-  font-family: sans-serif;
+  color: #f2f4f4;
   font-weight: 300;
   margin: .5em 0;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 217, ../../sass/styles.scss */
+/* line 225, ../../sass/styles.scss */
 .mainContent #apidatasection {
-  background-color: #273547;
+  background-color: #3f9cdc;
 }
-/* line 220, ../../sass/styles.scss */
+/* line 228, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle {
   margin: 2em 0;
   overflow: auto;
 }
-/* line 224, ../../sass/styles.scss */
+/* line 232, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid {
   padding: 0 2em;
-  border: 1px solid #e6e6e6;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  outline: 5px solid white;
 }
-/* line 227, ../../sass/styles.scss */
+/* line 236, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults {
   min-height: 220px;
   max-width: 981px;
   margin: 0 auto;
 }
-/* line 231, ../../sass/styles.scss */
+/* line 240, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody {
   margin: 2em 0;
 }
-/* line 233, ../../sass/styles.scss */
+/* line 242, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apresults .apresbody h2 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: .5em;
 }
-/* line 250, ../../sass/styles.scss */
+/* line 259, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid #clipboard {
   text-align: center;
   margin: 2em 0;
   padding: 1em 0;
-  border-bottom: #f7f7f7;
+  border-bottom: #f2f4f4;
 }
-/* line 257, ../../sass/styles.scss */
+/* line 267, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea {
   margin: 1em 0;
 }
-/* line 259, ../../sass/styles.scss */
+/* line 269, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea h2 {
   font-size: 32px;
   margin: .5em 0;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 263, ../../sass/styles.scss */
+/* line 274, ../../sass/styles.scss */
 .mainContent #apidatasection .container .mainmiddle .innermid .apiarea p {
   margin: .5em 0;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 277, ../../sass/styles.scss */
+/* line 289, ../../sass/styles.scss */
 .mainContent #gmap {
   background-color: #1A8BCB;
 }
-/* line 283, ../../sass/styles.scss */
+/* line 295, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro {
-  font-family: sans-serif, arial, helvetica;
+  font-family: "Nobile", sans-serif, arial, georgia, verdana;
   padding: 5em 0;
   height: auto;
   text-align: center;
 }
-/* line 288, ../../sass/styles.scss */
+/* line 300, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro h1 {
   font-size: 36px;
   line-height: 48px;
-  color: #ffffff;
+  color: #f2f4f4;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
   margin: 1em 0;
-  font-family: arial-rounded,sans-serif;
   letter-spacing: 1px;
 }
-/* line 297, ../../sass/styles.scss */
+/* line 310, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro {
   margin: 2.688em 0;
 }
-/* line 299, ../../sass/styles.scss */
+/* line 312, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .left .geointro .subgeointro p {
   font-size: 20px;
   line-height: 28px;
-  color: #e6e6e6;
+  color: #f2f4f4;
   margin: .5em 0;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 314, ../../sass/styles.scss */
+/* line 328, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer {
   position: relative;
   width: 100%;
@@ -358,12 +393,12 @@ header li#active {
   margin: 0 auto;
   z-index: 5;
 }
-/* line 320, ../../sass/styles.scss */
+/* line 334, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .overlaytophalf {
   height: 18.75em;
   position: relative;
 }
-/* line 323, ../../sass/styles.scss */
+/* line 337, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .overlaytophalf #loadinggif {
   width: 100%;
   height: 166.5%;
@@ -372,26 +407,26 @@ header li#active {
   position: absolute;
   display: block;
   opacity: 0.7;
-  background-color: #ffffff;
+  background-color: #f2f4f4;
   z-index: 99;
   text-align: center;
 }
-/* line 334, ../../sass/styles.scss */
+/* line 348, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .overlaytophalf #loadinggif img#loading-image {
   position: absolute;
   top: 10%;
   left: 27%;
   z-index: 100;
 }
-/* line 343, ../../sass/styles.scss */
+/* line 357, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .gsearch {
   height: 40%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: 5;
   padding: 2em 0;
 }
-/* line 349, ../../sass/styles.scss */
+/* line 363, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .gsearch p {
   z-index: 15;
   font-size: 30px;
@@ -399,8 +434,9 @@ header li#active {
   letter-spacing: 1.5px;
   line-height: 36px;
   padding: 0 1em;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 357, ../../sass/styles.scss */
+/* line 372, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .gsearch img#geover {
   position: absolute;
   bottom: 0;
@@ -408,14 +444,15 @@ header li#active {
   display: block;
   z-index: -1;
 }
-/* line 364, ../../sass/styles.scss */
+/* line 379, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer .gsearch #geolocbut {
   position: absolute;
   top: 15%;
   left: 2%;
   z-index: 25;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 372, ../../sass/styles.scss */
+/* line 388, ../../sass/styles.scss */
 .mainContent #gmap .container .geotop .right .geocontainer #map_canvas {
   height: 500px;
   right: 0%;
@@ -423,37 +460,54 @@ header li#active {
   bottom: 0%;
   width: 635px;
 }
-/* line 393, ../../sass/styles.scss */
+/* line 409, ../../sass/styles.scss */
 .mainContent #apidatasection .mainmiddle .innermid .apresults .apresbody h1 {
   font-size: 36px;
   line-height: 48px;
-  color: #cccccc;
+  color: #f2f4f4;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
-/* line 398, ../../sass/styles.scss */
+/* line 415, ../../sass/styles.scss */
 .mainContent #apidatasection .mainmiddle .innermid .apresults .apresbody p {
   font-size: 20px;
   line-height: 28px;
-  color: #e6e6e6;
+  color: #f2f4f4;
   margin: .5em 0;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
+}
+/* line 423, ../../sass/styles.scss */
+.mainContent #apidatasection .mainmiddle .innermid .apresults .apresbody textarea {
+  text-shadow: 0.2 0px 1px rgba(99, 99, 99, 0.7);
+  line-height: 20px;
+  color: #212a2c;
+  letter-spacing: .3px;
+  padding: 5px 10px;
+  border: 1px solid rgba(8, 1, 1, 0.85);
+  outline: 2px solid rgba(19, 133, 212, 0.99);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* buttons */
-/* line 425, ../../sass/styles.scss */
+/* line 456, ../../sass/styles.scss */
 .btn.btn-danger.btn-lg {
-  color: #ffffff;
+  color: #f2f4f4;
   background-color: #b6312c;
   border-color: #952226;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }
 
-/* line 430, ../../sass/styles.scss */
+/* line 462, ../../sass/styles.scss */
 .btn.btn-danger.btn-lg:hover {
-  color: #ffffff;
+  color: #f2f4f4;
   background-color: #cf3d37;
   border-color: #a12529;
 }
 
-/* line 436, ../../sass/styles.scss */
+/* line 468, ../../sass/styles.scss */
 .btn.btn-danger.btn-lg:focus {
   border: none;
   outline: none;
+  text-shadow: 0px 0px 1px rgba(99, 99, 99, 0.7);
 }

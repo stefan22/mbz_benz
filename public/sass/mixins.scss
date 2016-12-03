@@ -1,0 +1,23 @@
+/* compas-mixin border-radius
+-----------------                        						*/
+$horz:5px;
+$vert:5px;
+
+.border-radius {
+	@include border-radius($horz,$vert);
+}
+
+
+/* compass-mixin text-shadow 
+--------------------------                                      */
+$default-text-shadow-h-offset: -1px;  
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-blur: 1px;
+$default-text-shadow-spread: false;
+$default-text-shadow-color: rgba(99,99,99,.7);
+
+.single-text-shadow {
+	@include single-text-shadow($default-text-shadow-h-offset,
+		$default-text-shadow-h-offset,$default-text-shadow-blur,
+		$default-text-shadow-spread,$default-text-shadow-color);
+}

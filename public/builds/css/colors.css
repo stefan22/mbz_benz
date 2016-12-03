@@ -1,15 +1,18 @@
-/*=================================
+/* =================================
 
- *** ALL COLORS **** 
-
-	1. Headings     
-	2. Subheadings 
-	3. backgrounds  
-	4. links
-	5. paragraphs   
-	6. buttons
-
-===================================*/
+ *** Solarized palette **** 
+     -----------------	
+	/* monotones go from dark to light 
+	    
+	    bgcolors dark
+	    -------------               */
+/* content tones
+   -------------                */
+/* bg colors light
+   ---------------              */
+/* accent colors
+   -------------                */
+/* ==================================== */
 /* 1. Headings colors			
 =====================*/
 /* subheadings */

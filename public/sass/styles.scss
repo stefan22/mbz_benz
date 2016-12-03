@@ -1,9 +1,10 @@
 @import "compass";
+@import "compass/reset";
 @import "susy";
 @import "variables";
+@import "base";
 @import "mixins";
-@import "reset";
-@import "colors";
+
 
 
 
@@ -15,6 +16,13 @@ _______________________________________
 
 */
 
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-primary;
+}
+
+p, button {
+	font-family: $font-secondary;
+}
 
 $font:16px;
 
@@ -39,30 +47,30 @@ body {
 
 
 p {
-	font-family: sans-serif;
+	
 	font-weight: 300;
 	font-size: $font + 4;
 	line-height: $font*2;
-	color:darken($white,10);
+	color:lighten($base1,35);
 }
 
 header {
-    background-color: $navbg;
+    background-color:darken($red,10);
     padding: 3.5em 0;
     border-bottom: 1px solid rgba($black, 0.75);
     nav.navbar.navbar-inverse.navbar-fixed-top {
-		background-color: $navbg;	
+		background-color: darken($red,10);	
 	}//nav.navbar.navbar-inverse.navbar-fixed-top
 	.navbar-inverse .navbar-nav > li > a {
-		color: darken($white,10);
-    	text-shadow: 0px -1px 1px rgba($black, 0.75);
+		color: lighten($base1,35);
+    	text-shadow: {@include single-text-shadow;}
 	}
 	.navbar-inverse .navbar-nav > .open > a, .navbar-inverse 
 	.navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus,
 	li.dropdown.open a.dropdown-toggle  {
-		color: $white;
+		color: lighten($base1,35);
     	text-shadow: 0px -1px 1px rgba($black, 0.75);
-    	background-color: $white;
+    	background-color: lighten($base1,35);
 	
 	}//resources nav submenu	
 	
@@ -86,11 +94,11 @@ header {
 						    font-size: (($font*2)+ 4px);
 						    line-height: (($font*2) + 16px);
 						    vertical-align: middle;
-						    font-family: arial-rounded,sans-serif;
+						   
 						    letter-spacing: 1px;
-						    color: $white;
+						    color: lighten($base1,35);
 						    margin-left: 1em;
-						    text-shadow: 0px -1px 0px lighten($black,30);
+						    @include single-text-shadow;
 						
 					}//h1
 					
@@ -103,7 +111,7 @@ header {
 					    background: rgba($lightblue,.90);
 					    box-shadow: 0px 0px 1px 2px rgba($navbg, 0.9);
 					    border: 1px solid rgba($black, 0.5);
-					    border-radius: 50%;
+					    @include border-radius(50%,50%);
 					}//img
 					
 			}//subheader-img
@@ -120,8 +128,9 @@ header {
 				font-size: $font + 6;
 				line-height: $font + 10px;
 				font-weight: normal;
-				font-family: arial-rounded,sans-serif;
+					
 				letter-spacing: 1px;
+				@include single-text-shadow();
 				a {
 					padding-top: 24px;
 				}
@@ -154,21 +163,18 @@ header {
 .mainContent {
 	
 	#mainheading {
-		background-color: $midblue;
+		background-color: $base02;
 		height: 330px;
 		.container {
 			.maintop {
 			
 				.maintopimg {
-			    	    background: url(../assets/images/collaboration-security.svg) no-repeat;
-					    background-position: 3px 62px;
-					    background-color: rgba($midblue, 0.1);
+			    	    background: url(../assets/images/collaboration-security.png) no-repeat;
+					    background-position: 3px 66px;
 					    height: 329px;
 					    width: 100%;
-					    text-shadow: 0 0px 1px rgba($black, 0.6);
-					    border-bottom: 1px solid $white;
+					    border-bottom: 1px solid lighten($base1,35);
 					    border-top: 0;
-					    background-color: $midblue;
 					    margin: 0em 0 0 0;
 
 			    }//maintopimg
@@ -178,8 +184,8 @@ header {
 			    .headline {
 				    margin: 2em 0;
 				    .shadebox {
-				    	background: rgba(26, 139, 203, 0.7);
-					    border-radius: 3px;
+				    	background: lighten($blue,7);
+					    @include border-radius;
 					    padding: 1.157em 0;
 				    	.txwrap {
 					    	padding:0 1.5em;
@@ -187,19 +193,21 @@ header {
 					    	h3 {
 								font-size: ($font) + 8;
 								line-height: ($font)*2 + 6px;
-								color:$white;
+								color:lighten($base1,50);
 								margin-bottom: .5em;
-								font-family: $font-family;
+								font-family: $font-primary;
 								letter-spacing: 1px;
+								@include single-text-shadow;
 							}//h1
 							p {
 								font-size: ($font) + 4;
 								line-height: ($font) + 12;
-								color:darken($white,10);
+								color:lighten($base1,35);
 
-								font-family: sans-serif;
+								
 								font-weight: 300;
-								margin:.5em 0;	
+								margin:.5em 0;
+								@include single-text-shadow;	
 							}//h3
 
 				    	}//txwrap
@@ -215,7 +223,7 @@ header {
 	
 
 	#apidatasection {
-		background-color: $darkblue;
+		background-color:lighten($blue,7);
 		.container {
 			.mainmiddle {
 				margin:2em 0;
@@ -223,7 +231,8 @@ header {
 				
 				.innermid {
 					padding:0 2em;
-					border:1px solid darken($white,10);
+					@include border-radius;
+					outline: 5px solid white;
 					.apresults {
 						min-height: 220px;
 						max-width: 981px;
@@ -251,7 +260,8 @@ header {
 						text-align: center;
 						margin:2em 0;
 						padding:1em 0;
-						border-bottom: darken($white,3);
+						border-bottom: lighten($base1,35);
+
 
 					}//clipboard
 					.apiarea {
@@ -259,9 +269,11 @@ header {
 						h2 {
 							font-size: $font*2;
 							margin:.5em 0;
+							@include single-text-shadow;
 						}//h2
 						p {
 							margin:.5em 0;
+							@include single-text-shadow;
 						}
 					}//apiarea
 
@@ -281,17 +293,18 @@ header {
 				
 				.left {
 					.geointro {
-						font-family: $font-family;
+						font-family: $font-primary;
 						padding:5em 0;
 						height: auto;
 						text-align: center;
 						h1 {
 							font-size: (($font*2)+ 4px);
 						    line-height: (($font*2) + 16px);
-						    color: $white;
+						    color: lighten($base1,35);
+						    @include single-text-shadow;
 						    
 						    margin:1em 0;
-						    font-family: arial-rounded,sans-serif;
+						   
 						    letter-spacing: 1px;
 						}//h1
 						.subgeointro {
@@ -299,8 +312,9 @@ header {
 							p {
 								font-size: $font + 4;
 								line-height: $font + 12;
-								color:darken($white,10);
+								color:lighten($base1,35);
 								margin: .5em 0;
+								@include single-text-shadow;
 							
 							}//p
 
@@ -328,7 +342,7 @@ header {
 							   	position: absolute;
 							   	display: block;
 							   	opacity: 0.7;
-							   	background-color: $white;
+							   	background-color: lighten($base1,35);
 							   	z-index: 99;
 							   	text-align: center;
 							   	img#loading-image {
@@ -343,7 +357,7 @@ header {
 					    .gsearch {
 					    	height: 40%;
 					    	width: 100%;
-					    	background-color: rgba($black,.2);
+					    	background-color: rgba($black,.65);
 					    	z-index: 5;
 					    	padding:2em 0;
 					    	p {
@@ -353,6 +367,7 @@ header {
 							    letter-spacing: 1.5px;
 							    line-height: 36px;
 							    padding: 0 1em;
+							    @include single-text-shadow;
 					    	}
 					    	img#geover {
 					    		position: absolute;
@@ -366,6 +381,7 @@ header {
 					    		top: 15%;
 					    		left: 2%;
 					    		z-index: 25;
+					    		@include single-text-shadow;
 					    		
 					    	}//geolocbut
 					    }//gsearch	
@@ -393,15 +409,27 @@ header {
 						h1 {
 							font-size: (($font*2)+ 4px);
 						    line-height: (($font*2) + 16px);
-						    color: darken($white,20);		
+						    color: lighten($base1,35);	
+						    @include single-text-shadow;
 						}//h1
 						p {
 							font-size: $font + 4;
 							line-height: $font + 12;
-							color:darken($white,10);
+							color:lighten($base1,35);
 							margin: .5em 0;
+							@include single-text-shadow;
 
 						}//p
+						textarea {
+						    @include single-text-shadow(.2);
+						    line-height: 20px;
+						    color: darken($base01,25);
+						    letter-spacing: .3px;
+						    padding: 5px 10px;
+						    border: 1px solid rgba(8, 1, 1, 0.85);
+						    outline: 2px solid rgba(19, 133, 212, 0.99);
+						    @include border-radius;
+						}//textarea
 
 					}//apresbody
 
@@ -421,14 +449,18 @@ header {
 
 
 /* buttons */
+button {
+
+}
 
 .btn.btn-danger.btn-lg {
-	color: $white;
+	color: lighten($base1,35);
 	background-color: $buttonbg;
 	border-color: $buttonborder;
+	@include single-text-shadow;
 }//btn-danger
 .btn.btn-danger.btn-lg:hover {
-    color: $white;
+    color: lighten($base1,35);
     background-color: lighten($buttonbg,7);
     border-color: lighten($buttonborder,3);
 }//btn-danger:hover
@@ -436,4 +468,5 @@ header {
 .btn.btn-danger.btn-lg:focus {
 	border: none;
 	outline: none;
+	@include single-text-shadow;
 }

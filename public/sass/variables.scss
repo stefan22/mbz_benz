@@ -1,0 +1,113 @@
+/* =================================
+
+ *** Solarized palette **** 
+     -----------------	
+	/* monotones go from dark to light 
+	    
+	    bgcolors dark
+	    -------------               */	
+	 	$base03:    #002b36;
+        $base02:    #073642;
+    /* content tones
+       -------------                */    
+        $base01:    #586e75;
+        $base00:    #657b83;
+        $base0:     #839496;
+        $base1:     #93a1a1;
+    /* bg colors light
+       ---------------              */    
+        $base2:     #eee8d5;
+        $base3:     #fdf6e3;
+
+    /* accent colors
+       -------------                */
+        $yellow:    #b58900;
+        $orange:    #cb4b16;
+        $red:       #dc322f;
+        $magenta:   #d33682;
+        $violet:    #6c71c4;
+        $blue:      #268bd2;
+        $cyan:      #2aa198;
+        $green:     #859900;
+
+
+/* ==================================== */
+
+/* 1. Headings colors			
+=====================*/
+
+$white : #ffffff;
+$black:  #000000;
+$black1: #101010;
+$white1: #fafafa;
+
+/* subheadings */
+
+$navbg:#8c1c20;
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2. Subheadings colors			
+=====================*/
+
+
+
+/* 3. backgrounds colors
+========================*/
+
+/* top section */
+$midblue:#1D4E69;
+
+
+/* middle section */
+$lightblue:#1A8BCB;
+
+
+/* bottom section */
+$darkblue:#273547;
+
+
+/* 4. links & map
+=================*/
+$mapColor:#2581B8;
+
+/* 5. paragraphs
+================*/
+/*  darken($white,10);  */
+
+
+
+/* 6. buttons
+=============*/
+/*large red button*/
+$buttonbg: #b6312c;
+$buttonborder:#952226;
+
+
+/*footer
+========*/
+$footerColor:#273547;
+
+
+
+
+/* Fonts
+=================== */
+
+$font-primary: 'Nobile', sans-serif, arial, georgia, verdana;
+$font-secondary: 'Roboto+Mono', sans-serif, arial, georgia, verdana;
+
+
+
+
+
+
