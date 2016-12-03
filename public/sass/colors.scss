@@ -2,12 +2,12 @@
 
  *** ALL COLORS **** 
 
-						1. Headings     
-						2. Subheadings 
-						3. backgrounds  
-						4. links
-						5. paragraphs   
-						6. buttons
+	1. Headings     
+	2. Subheadings 
+	3. backgrounds  
+	4. links
+	5. paragraphs   
+	6. buttons
 
 ===================================*/
 
@@ -15,13 +15,13 @@
 =====================*/
 
 $white : #ffffff;
-$black: #000000;
+$black:  #000000;
 $black1: #101010;
 $white1: #fafafa;
 
 /* subheadings */
 
-
+$navbg:#8c1c20;
 
 
 
@@ -36,22 +36,22 @@ $white1: #fafafa;
 
 /* 2. Subheadings colors			
 =====================*/
-$colorTitle:#333;
-$pinkish:#e6e6e6;
+
 
 
 /* 3. backgrounds colors
 ========================*/
 
 /* top section */
-
+$midblue:#1D4E69;
 
 
 /* middle section */
+$lightblue:#1A8BCB;
 
 
 /* bottom section */
-
+$darkblue:#273547;
 
 
 /* 4. links & map
@@ -60,29 +60,15 @@ $mapColor:#2581B8;
 
 /* 5. paragraphs
 ================*/
-$colorPara:#666666;
+/*  darken($white,10);  */
 
 
 
 /* 6. buttons
 =============*/
-
-
-.btn.btn-danger.btn-lg {
-	color: #ffffff;
-	background-color: #b6312c;
-	border-color: #952226;
-}//btn-danger
-.btn.btn-danger.btn-lg:hover {
-    color: #ffffff;
-    background-color: #c9302c;
-    border-color: #ac2925;
-}//btn-danger:hover
-
-.btn.btn-danger.btn-lg:focus {
-	border: none;
-	outline: none;
-}
+/*large red button*/
+$buttonbg: #b6312c;
+$buttonborder:#952226;
 
 
 /*footer
