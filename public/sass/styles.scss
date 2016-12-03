@@ -38,14 +38,6 @@ body {
 
 }
 
-
-
-
-
-
-
-
-
 p {
 	
 	font-weight: 300;
@@ -294,7 +286,7 @@ header {
 				.left {
 					.geointro {
 						font-family: $font-primary;
-						padding:5em 0;
+						padding:3.5em 0;
 						height: auto;
 						text-align: center;
 						h1 {
@@ -448,25 +440,3 @@ header {
 }//mainContent
 
 
-/* buttons */
-button {
-
-}
-
-.btn.btn-danger.btn-lg {
-	color: lighten($base1,35);
-	background-color: $buttonbg;
-	border-color: $buttonborder;
-	@include single-text-shadow;
-}//btn-danger
-.btn.btn-danger.btn-lg:hover {
-    color: lighten($base1,35);
-    background-color: lighten($buttonbg,7);
-    border-color: lighten($buttonborder,3);
-}//btn-danger:hover
-
-.btn.btn-danger.btn-lg:focus {
-	border: none;
-	outline: none;
-	@include single-text-shadow;
-}
